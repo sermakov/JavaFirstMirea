@@ -1,4 +1,4 @@
-package ru.mirea;
+package ru.mirea.test;
 
 public class Main {
 
