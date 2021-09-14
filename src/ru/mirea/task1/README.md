@@ -1,6 +1,8 @@
-# Практическая работа 1
+# Практическая работа 1. Основы
 Практическая работа №1 дисциплине «[Программирование на языке Джава](https://online-edu.mirea.ru/course/view.php?id=4053)» (РТУ МИРЭА, ИИТ, 2-ой курс).
 **Преподаватель**: Ермаков Сергей Романович, ermakov_s@mirea.ru, ermakov@sumirea.ru.
+
+***Ref**: методические указания по выполнению **лабораторных** работ (№1)*
 
 ## Задание на практическую работу
 1. [Создать проект в IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-application.html#write-code).
