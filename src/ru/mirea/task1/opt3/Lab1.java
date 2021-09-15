@@ -18,7 +18,7 @@ public class Lab1 {
 
         System.out.println("The summary of the elements of the array: " + sum);
 
-        /* NEXT ARRAY */
+        /* NEXT ARRAY  */
 
         System.out.print("Enter the size of the array: ");
         int size2 = scn.nextInt();
