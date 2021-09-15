@@ -7,7 +7,7 @@ public class Lab1 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите длину массива: ");
         int l = sc.nextInt();
-        System.out.print("Введите массив: ");
+        System.out.print("Введите 1массив: ");
         int[] a = new int[l];
         int s = 0;
         for (int i=0; i<l; i++) {
