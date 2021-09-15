@@ -37,11 +37,16 @@ public class Closet extends Furniture  {
     }
 
     @Override
+    public String getTypeOfFurniture() {
+        return "Шкаф";
+    }
+
+    @Override
     public String toString() {
         return ("Количество полок в шкафу: "                      + this.shelvesAmount
                 + "\nКоличество замков в шкафу: "                 + this.locksAmount
-                + "\nМатериалы стола: "                           + super.getMaterialType()
-                + "\nЦена стола: "                                + super.getCost() + " USD"
-                + "\nВес стола: "                                 + super.getWeight()) + " кг";
+                + "\nМатериалы шкафа: "                           + super.getMaterialType()
+                + "\nЦена шкафа: "                                + super.getCost() + " USD"
+                + "\nВес шкафа: "                                 + super.getWeight()) + " кг";
     }
 }

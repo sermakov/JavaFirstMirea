@@ -37,6 +37,11 @@ public class Table extends Furniture {
     }
 
     @Override
+    public String getTypeOfFurniture() {
+        return "Стол";
+    }
+
+    @Override
     public String toString() {
         return ("Максимальная нагрузка на письменный стол: "      + maxTableLoad
                 + "\nКоличество ящиков в столе: "                 + drawersAmount

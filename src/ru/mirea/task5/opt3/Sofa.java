@@ -37,8 +37,13 @@ public class Sofa extends Furniture {
     }
 
     @Override
+    public String getTypeOfFurniture() {
+        return "Диван";
+    }
+
+    @Override
     public String toString() {
-        return ("Это" + (pullOut ? "" : " не")     + " раздвижной тип дивана"
+        return ("Это" + (pullOut ? "" : " не")      + " раздвижной тип дивана"
                 + "\nКоличество мест дивана: "      + seatsAmount
                 + "\nМатериалы дивана: "            + super.getMaterialType()
                 + "\nЦена дивана: "                 + super.getCost() + " USD"

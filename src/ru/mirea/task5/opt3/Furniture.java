@@ -39,6 +39,8 @@ public abstract class Furniture {
         this.materialType = materialType;
     }
 
+    public abstract String getTypeOfFurniture();
+
     @Override
     public abstract String toString();
 }
