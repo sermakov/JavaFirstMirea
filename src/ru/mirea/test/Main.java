@@ -4,7 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.print("Hi");
-        System.out.print("Tester");
+        System.out.println("Hi");
+        System.out.println("Tester");
+        System.out.println("Third");
     }
 }
