@@ -5,9 +5,9 @@ public abstract class Rectangle extends Shape {
     protected double width;
     protected double length;
     public void Rectangle(){};
-    public void Rectangle(double width, double lenght) {
+    public void Rectangle(double width, double length) {
         this.width = width;
-        this.length = lenght;
+        this.length = length;
     }
     public void Rectangle (double width, double length,String color, Boolean filled){
         this.width = width;
