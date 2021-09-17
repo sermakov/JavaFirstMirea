@@ -1,4 +1,4 @@
-package ru.mirea.task5.lab3.Furniture;
+package ru.mirea.task5.lab3.furniture;
 
 public class FurnitureShop {
     public void sellFurniture(Furniture f, int price) {

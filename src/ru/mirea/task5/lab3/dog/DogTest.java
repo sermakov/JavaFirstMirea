@@ -1,9 +1,5 @@
 package ru.mirea.task5.lab3.dog;
 
-import ru.mirea.task5.lab3.Furniture.Cabinet;
-import ru.mirea.task5.lab3.Furniture.FurnitureShop;
-import ru.mirea.task5.lab3.Furniture.Sofa;
-
 public class DogTest {
     public static void test() {
         FlyingDog flyingDog = new FlyingDog(5, 300000000);
