@@ -1,4 +1,4 @@
-package ru.mirea.task5.lab3.Furniture;
+package ru.mirea.task5.lab3.furniture;
 
 abstract class Furniture {
     private String name;
