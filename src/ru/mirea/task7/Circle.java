@@ -1,8 +1,8 @@
 package ru.mirea.task7;
 import java.lang.*;
-public abstract class Circle extends Shape {
+public  class Circle extends Shape {
+    public void Shape(){};
     protected double radius;
-    public void Circle(){};
     public void Circle(double radius){this.radius= radius;}
     public void Circle (double radius, String color, Boolean filled){
         this.radius = radius;
