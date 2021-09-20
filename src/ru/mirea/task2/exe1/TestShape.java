@@ -6,6 +6,6 @@ public class TestShape {
         System.out.println(shape.toString());
         shape.setSize(60);
         shape.setShape("square");
-        System.out.println('\n' + "size " + shape.getSize() + ' ' + shape.getShape());
+        System.out.println("\n" + "size " + shape.getSize() + " " + shape.getShape());
     }
 }
