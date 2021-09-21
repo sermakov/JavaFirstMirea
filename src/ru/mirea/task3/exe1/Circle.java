@@ -25,6 +25,7 @@ public class Circle {
         return length;
     }
 
+    @Override
     public String toString(){
         return "Radius: " + rad + " Length: " + length + " Square: " + square;
     }
