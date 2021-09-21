@@ -10,6 +10,7 @@ public class Animal implements Nameable {
         this.type = type;
     }
 
+    @Override
     public String getName(){ return name;}
     public String getType() {return type;}
 }

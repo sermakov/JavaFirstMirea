@@ -10,6 +10,7 @@ public class Car implements Nameable {
         this.name = name;
     }
 
+    @Override
     public String getName(){ return name;}
     public double getPrice() {return price;}
 }
