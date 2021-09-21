@@ -35,6 +35,7 @@ public class Ball {
         this.size = size;
     }
 
+    @Override
     public String toString(){
         return "size: " + size  + " shape: " + shape + " color: " + color;
     }
