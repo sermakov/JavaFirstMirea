@@ -34,7 +34,7 @@ public class Book {
     public void setCountOfPages(int countOfPages){
         this.countOfPages = countOfPages;
     }
-
+    @Override
     public String toString(){
         return "countOfPages " + countOfPages + " name: " + name + " author: " + author;
     }
