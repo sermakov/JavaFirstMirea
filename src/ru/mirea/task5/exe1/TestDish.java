@@ -3,7 +3,7 @@ package ru.mirea.task5.exe1;
 public class TestDish {
 
     public static void main(String[] args) {
-        Plate plate = new Plate(0.8, "square", "white");
+        Plate plate = new Plate(1.8, "square", "white");
         Jug jug = new Jug(2.1, "circle", "red");
         Saucer saucer = new Saucer(1.5, "circle", "blue");
 
