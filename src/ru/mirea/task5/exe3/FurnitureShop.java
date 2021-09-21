@@ -5,9 +5,9 @@ public class FurnitureShop {
 
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        Sofa sofa = new Sofa( 1.5, "sofa", 100000, "leather");
-        Table table = new Table(3, "table", 20000, "wood");
-        Chaire chaire = new Chaire(0.6, "chaire", 1000, "velvet");
+        Furniture sofa = new Sofa( 1.5, "sofa", 100000, "leather");
+        Furniture table = new Table(3, "table", 20000, "wood");
+        Furniture chaire = new Chaire(0.6, "chaire", 1000, "velvet");
 
         System.out.println("slot 1" + sofa.toString() + '\n');
         System.out.println("slot 2" + table.toString() + '\n');
