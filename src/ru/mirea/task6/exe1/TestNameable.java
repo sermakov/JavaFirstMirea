@@ -3,16 +3,12 @@ package ru.mirea.task6.exe1;
 public class TestNameable {
 
     public static void main(String[] args) {
-        Planet planet = new Planet("dwarf planet", "Pluto");
-        Car car = new Car(20000000,"Volkswagen Golf Beetle");
-        Animal animal = new Animal("Mammalia", "Baleonoptera musculus");
+        Nameable item1 = new Planet("dwarf planet", "Pluto");
+        Nameable item2 = new Car(20000000,"Volkswagen Golf Beetle");
+        Nameable item3 = new Animal("Mammalia", "Baleonoptera musculus");
 
-        Nameable item = new Car(20000000,"Volkswagen Golf Beetle");
-
-        System.out.println(item.getName());
-
-        System.out.println("Planet: " + '\t' + planet.getName() + '\n');
-        System.out.println("Car: " + '\t' + car.getName() + '\n');
-        System.out.println("Animal: " + '\t' + animal.getName() + '\n');
+        System.out.println("Planet: " + '\t' + item1.getName() + '\n');
+        System.out.println("Car: " + '\t' + item2.getName() + '\n');
+        System.out.println("Animal: " + '\t' + item3.getName() + '\n');
     }
 }
