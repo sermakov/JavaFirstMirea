@@ -1,6 +1,6 @@
 package ru.mirea.task6.exe2;
 
-public class Notebook {
+public class Notebook implements Priceable{
     private String model;
     private double price;
 
@@ -10,6 +10,7 @@ public class Notebook {
         this.model = model;
     }
 
+    @Override
     public double getPrice(){ return price;}
     public String getModel() {return model;}
 }
