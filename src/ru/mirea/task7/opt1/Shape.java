@@ -1,9 +1,9 @@
-package ru.mirea.task7;
+package ru.mirea.task7.opt1;
 
 public abstract class Shape {
     protected String color;
     protected Boolean filled;
-    public abstract void  Shape();
+    public void  Shape(){};
     public void Shape(String color, Boolean filled){
         this.color = color;
         this.filled = filled;

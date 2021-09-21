@@ -1,13 +1,22 @@
-package ru.mirea.task7;
+package ru.mirea.task7.opt1;
 
 import java.lang.*;
-public abstract class Square extends Shape {
+public class Square extends Rectangle {
     protected double side;
-    public void Square(){};
-    public void Rectangle (double side){
+    public Square(){
+        super();
+        this.side=1;
+        this.color="Blue";
+        this.filled=false;
+    };
+    public Square (double side){
+        super();
+        this.color="Blue";
+        this.filled=false;
         this.side = side;
     }
-    public void Square(double side, String color, boolean filled) {
+    public Square(double side, String color, boolean filled) {
+        super();
         this.side = side;
         this.color = color;
         this.filled = filled;

@@ -1,10 +1,21 @@
-package ru.mirea.task7;
+package ru.mirea.task7.opt1;
 import java.lang.*;
 public  class Circle extends Shape {
-    public void Shape(){};
     protected double radius;
-    public void Circle(double radius){this.radius= radius;}
-    public void Circle (double radius, String color, Boolean filled){
+    public Circle(){
+        super();
+        this.radius=1;
+        this.color="Blue";
+        this.filled=false;
+    }
+    public Circle(double radius){
+        super();
+        this.radius= radius;
+        this.color="Blue";
+        this.filled=false;
+    }
+    public Circle (double radius, String color, Boolean filled){
+        super();
         this.radius = radius;
         this.color = color;
         this.filled = filled;

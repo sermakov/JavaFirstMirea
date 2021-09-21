@@ -88,7 +88,7 @@
 5. Напишите два класса MovablePoint и MovableCircle - которые реализуют
    интерфейс Movable.
 
-   ![](Movable.jpg)
+   ![](../Movable.jpg)
 
    ```java
    public interface Movable {
@@ -103,7 +103,7 @@
    верхняя левая и нижняя правая точки) и реализующие интерфейс Movable. Убедитесь, что две точки имеет одну и ту же скорость (нужен метод это
    проверяющий).
 
-   ![](MovableRectangle.jpg)
+   ![](../MovableRectangle.jpg)
 
 ## Дополнительные материалы
 
