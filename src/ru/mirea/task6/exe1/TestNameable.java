@@ -7,6 +7,10 @@ public class TestNameable {
         Car car = new Car(20000000,"Volkswagen Golf Beetle");
         Animal animal = new Animal("Mammalia", "Baleonoptera musculus");
 
+        Nameable item = new Car(20000000,"Volkswagen Golf Beetle");
+
+        System.out.println(item.getName());
+
         System.out.println("Planet: " + '\t' + planet.getName() + '\n');
         System.out.println("Car: " + '\t' + car.getName() + '\n');
         System.out.println("Animal: " + '\t' + animal.getName() + '\n');

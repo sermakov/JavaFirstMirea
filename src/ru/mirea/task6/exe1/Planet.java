@@ -1,6 +1,6 @@
 package ru.mirea.task6.exe1;
 
-public class Planet {
+public class Planet implements Nameable {
     private String name;
     private String type;
 

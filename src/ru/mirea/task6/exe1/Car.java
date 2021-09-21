@@ -1,6 +1,6 @@
 package ru.mirea.task6.exe1;
 
-public class Car {
+public class Car implements Nameable {
     private double price;
     private String name;
 

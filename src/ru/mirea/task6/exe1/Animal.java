@@ -1,6 +1,6 @@
 package ru.mirea.task6.exe1;
 
-public class Animal {
+public class Animal implements Nameable {
     private String type;
     private String name;
 
