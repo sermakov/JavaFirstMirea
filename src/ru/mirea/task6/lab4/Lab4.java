@@ -1,28 +1,26 @@
 package ru.mirea.task6.lab4;
 
-import javax.naming.Name;
-
 public class Lab4 {
     public static void main(String[] args) {
         test();
     }
     public static void test() {
-        class T1 implements Nameable {
-
+        class Pig implements Nameable {
+            String name = "Свинка Зеппа";
             @Override
             public String getName() {
-                return "Лошадь";
+                return name;
             }
         }
-        class T2 implements Priceable {
-
+        class Bread implements Priceable {
+            public int price = 50;
             @Override
             public int getPrice() {
-                return 50;
+                return price;
             }
         }
-        T1 t1 = new T1();
-        T2 t2 = new T2();
+        Pig t1 = new Pig();
+        Bread t2 = new Bread();
         System.out.println(t1.getName());
         System.out.println(t2.getPrice());
     }
