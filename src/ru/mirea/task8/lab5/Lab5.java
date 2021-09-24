@@ -7,7 +7,7 @@ public class Lab5{
     public static void main(String[] args) throws InterruptedException {
         Ex1.run();
         sleep(10000);
-        Ex2.run();
+        Ex2.run(args);
         sleep(10000);
         Ex3.run();
     }

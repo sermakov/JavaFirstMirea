@@ -9,11 +9,11 @@ import java.io.File;
 public class Ex2 {
     static BufferedImage image;
 
-    public static void run() {
+    public static void run(String[] args) {
         JFrame frame = new JFrame("Image app");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         try {
-            File f = new File("src/ru/mirea/task8/lab5/static_image.png");
+            File f = new File("src/ru/mirea/task8/lab5/"+args[0]);
             image = ImageIO.read(f);
         } catch (Exception e) {
             System.out.println("Bad file");
