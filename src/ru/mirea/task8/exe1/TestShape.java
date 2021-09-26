@@ -42,7 +42,7 @@ public class TestShape extends Application {
 
             Triangle2d triangle1 = new Triangle2d(300,300, 80, 2, Color.LAVENDER, Color.LAVENDERBLUSH);
             Triangle2d triangle2 = new Triangle2d(300,300, 70, 2, Color.SALMON, Color.LIGHTSALMON);
-            Triangle2d triangle3 = new Triangle2d(300,300, 60, 2, Color.DARKBLUE, Color.LIGHTSALMON);
+            Triangle2d triangle3 = new Triangle2d(300,300, 60, 2, Color.BLUE, Color.LIGHTSALMON);
             Triangle2d triangle4 = new Triangle2d(300,300, 50, 2, Color.KHAKI, Color.LIGHTSKYBLUE);
             Triangle2d triangle5 = new Triangle2d(300,300, 40, 2,
                     Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256)),
