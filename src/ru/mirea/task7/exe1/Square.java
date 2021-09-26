@@ -3,19 +3,19 @@ package ru.mirea.task7.exe1;
 public class Square extends Rectangle{
     protected double side;
     Square(){
-        this.side = 0;
+        this.width = this.length = this.side = 0;
         this.color = "";
         this.filled = false;
     }
 
     Square(double side){
-        this.side = side;
+        this.width = this.length = this.side = side;
         this.color = "";
         this.filled = true;
     }
 
     Square(double side, String color, boolean filled){
-        this.side = side;
+        this.width = this.length = this.side = side;
         this.color = color;
         this.filled = filled;
     }
@@ -25,7 +25,7 @@ public class Square extends Rectangle{
     }
 
     public void setSide(double side) {
-        this.side = side;
+        this.width = this.length = this.side = side;
     }
 
     @Override
