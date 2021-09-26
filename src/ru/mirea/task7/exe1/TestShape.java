@@ -17,7 +17,7 @@ public class TestShape {
         System.out.println(c1.isFilled());
         System.out.println(c1.getRadius());
         //Shape s2 = new Shape(); нельзя создать объекта абстрактного класса
-        Shape s3 = new Rectangle(1.0, 2.0, "RED", false); // Upcast
+        Shape s3 = new Rectangle(1.2, 2.0, "RED", false); // Upcast
         System.out.println(s3);
         System.out.println(s3.getArea());
         System.out.println(s3.getPerimeter());
