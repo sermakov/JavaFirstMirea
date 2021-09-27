@@ -3,7 +3,7 @@ package ru.mirea.task10.exe1;
 import java.util.Scanner;
 
 public class Recursia {
-    public MaxItemCount countMax(MaxItemCount maxItemCount){
+    public ru.mirea.task10.exe1.MaxItemCount countMax(ru.mirea.task10.exe1.MaxItemCount maxItemCount){
         Scanner in = new Scanner(System.in);
         System.out.println("Print number");
         int next;
@@ -23,7 +23,7 @@ public class Recursia {
 
     public static void main(String[] args){
         Recursia recur = new Recursia();
-        MaxItemCount maxItemCount = new MaxItemCount();
+        ru.mirea.task10.exe1.MaxItemCount maxItemCount = new ru.mirea.task10.exe1.MaxItemCount();
         maxItemCount = recur.countMax(maxItemCount);
 
         System.out.println("maxItemCount.max: " + maxItemCount.max);
