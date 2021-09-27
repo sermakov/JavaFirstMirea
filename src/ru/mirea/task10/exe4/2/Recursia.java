@@ -3,7 +3,7 @@ package ru.mirea.task10.exe4;
 public class Recursia {
     public static void main(String[] args) {
         Recursia recursia = new Recursia();
-        recursia.printN(5);
+        recursia.printN(6);
     }
 
     public void printN(int n){
