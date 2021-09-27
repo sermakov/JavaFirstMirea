@@ -1,4 +1,4 @@
-package ru.mirea.task3;
+package ru.mirea.task3.op3;
 import java.lang.*;
 public class Book {
     private String name;
