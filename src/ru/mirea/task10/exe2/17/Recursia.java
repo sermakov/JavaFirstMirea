@@ -1,7 +1,5 @@
 package ru.mirea.task10.exe2;
 
-import ru.mirea.task10.exe1.MaxItemCount;
-
 import java.util.Scanner;
 
 public class Recursia {
