@@ -9,15 +9,15 @@
 
 1. Прочитайте UML-диаграмму Shape.jpg: на диаграмме представлены абстрактный суперкласс Shape и его подклассы Circle, Rectangle and Square.
 
-   Прим.
-
-   \+ Public
-
-   \# Protected
-
-   \- Private
-
-   ~ Package
+   > Прим.
+>
+   > \+ Public
+>
+   > \# Protected
+>
+   > \- Private
+>
+   > ~ Package
 
 2. Создайте абстрактный родительский суперкласс Shape и его дочерние классы (подклассы).
 
