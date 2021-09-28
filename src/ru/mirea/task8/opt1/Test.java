@@ -1,6 +1,4 @@
-package ru.mirea.task8;
-
-import javax.swing.JFrame;
+package ru.mirea.task8.opt1;
 
 public class Test
 {

@@ -1,4 +1,4 @@
-package ru.mirea.task8;
+package ru.mirea.task8.opt1;
 
 import java.awt.*;
 public class Triangle extends Fig
