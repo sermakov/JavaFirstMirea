@@ -6,52 +6,55 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GuessIt extends JFrame {
-    int attempt;
-    int rand;
-    String lastScore;
-    JLabel Congratulation= new JLabel("Nice Cock!");
-    JLabel fail= new JLabel("Nice try");
-    JLabel mistake= new JLabel("Try again");
-    JLabel Try= new JLabel("Attempt"+attempt);
-    JButton but1= new JButton("Guess");
-    JPanel[] pnl = new JPanel[9];
-    public GuessIt()
-    {
-        setLayout(new GridLayout(3,3));
-        pnl[7] = new JPanel();
-        pnl[7].add(new JLabel("Real Madrid"));
-        add(pnl[0]);
-        pnl[1] = new JPanel();
-        add(pnl[1]);
-        pnl[2] = new JPanel();
-        pnl[2].add(new JLabel("AC Milan"));
-        add(pnl[2]);
-        pnl[3] = new JPanel();
-        pnl[3].add(but1);
-        but1.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent a)
-            {
-               attempt++;
+    public GuessIt() {
+        int attempt=3;
+        int rand = Rand();
+        JFrame frame = new JFrame("GuessIt");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setBackground(Color.BLUE);
+        frame.setSize(800, 600);
+        JButton but1 = new JButton("Guess");
+        but1.setBounds(325, 500, 150, 30);
+        frame.setLayout(null);
+        frame.add(but1);
+        JLabel labelTry = new JLabel("Attempts left:");
+        labelTry.setBounds(325, 100, 150, 150);
+        frame.add(labelTry);
+        JLabel labelHelper = new JLabel("");
+        labelHelper.setBounds(325, 150, 150, 150);
+        frame.add(labelHelper);
+        JTextField Input = new JTextField(10);
+        Input.setBounds(325,400,150,30);
+        frame.add(Input);
+        frame.setVisible(true);
+        but1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                try {
+                    int x1 = Integer.parseInt(Input.getText().trim());
+                    if(attempt == 0){
+                        JOptionPane.showMessageDialog(null, "Attempts is end !", "alert", JOptionPane.WARNING_MESSAGE);
+                    }
+                    if(x1>rand){
+                        labelHelper.setText("Yor number " + x1 + " is greater");
+                    }
+                    if(x1<rand){
+                        labelHelper.setText("Yor number " + x1 + " is lesser");
+                    }
+                    if(x1==rand){
+                        JOptionPane.showMessageDialog(null, "You Win !", "Congratulation", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Error in Numbers !", "alert", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
-        add(pnl[3]);
-        pnl[4] = new JPanel();
-        add(pnl[4]);
-        pnl[5] = new JPanel();
-        add(pnl[5]);
-        pnl[6] = new JPanel();
-        add(pnl[6]);
-        pnl[7] = new JPanel();
-        add(pnl[7]);
-        pnl[8] = new JPanel();
-        add(pnl[8]);
-        setSize(800,600);
-        setTitle("Football");
 
     }
-    public static void main(String[]args)
+    public int Rand(){
+        return (int) (Math.random()*20);
+    }
+    public static void main (String[]args)
     {
-        new GuessIt.setVisible(true);
+        GuessIt frame = new GuessIt();
     }
 }
