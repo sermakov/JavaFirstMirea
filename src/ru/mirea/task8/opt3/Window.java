@@ -22,7 +22,7 @@ public class Window extends JFrame {
         controls = new Container();
         controls = getContentPane();
         controls.setLayout(new FlowLayout());
-        pictureLabel = new JLabel(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\nyancat-rainbow-cat.gif","Test"));
+        pictureLabel = new JLabel(new ImageIcon("C:\\Users\\IVC1-5\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\nyancat-rainbow-cat.gif","Test"));
         controls.add(pictureLabel);
     }
 }
