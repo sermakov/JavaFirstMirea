@@ -32,5 +32,4 @@ public class MovablePoint implements Movable {
         this.x+=xSpeed;
     };
     public void moveRight(){ this.x+=xSpeed; };
-
 }
