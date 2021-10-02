@@ -8,7 +8,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class GuessIt extends JFrame {
-    int attempt = 2;
+    int attempt = 3;
     int rand = Rand();
     public GuessIt() {
         JFrame frame = new JFrame("GuessIt");
@@ -36,29 +36,35 @@ public class GuessIt extends JFrame {
             public void actionPerformed(ActionEvent ae) {
                 try {
                     int x1 = Integer.parseInt(Input.getText().trim());
-                    if(attempt == 0){
-                        labelTry.setText("Attempts left: " + attempt);
-                        labelHelper.setText("");
-                        but1.setBackground(Color.red);
-                        JOptionPane.showMessageDialog(null, "Attempts is end!", "Alert", JOptionPane.ERROR_MESSAGE);
-                    }
+                    Input.setText(null);
                     if(x1>rand){
+                        attempt--;
                         labelHelper.setText("Yor number " + x1 + " is greater");
                         labelTry.setText("Attempts left: " + attempt);
                         but1.setBackground(Color.yellow);
-                        attempt--;
                     }
                     else if(x1<rand){
+                        attempt--;
                         labelHelper.setText("Yor number " + x1 + " is lesser");
                         labelTry.setText("Attempts left: " + attempt);
                         but1.setBackground(Color.yellow);
-                        attempt--;
                     }
                     else {
+                        JOptionPane.showMessageDialog(null, "You Win!", "Congratulation", JOptionPane.INFORMATION_MESSAGE);
+                        attempt=3;
+                        rand=Rand();
                         labelTry.setText("Attempts left: " + attempt);
                         labelHelper.setText("");
                         but1.setBackground(Color.green);
-                        JOptionPane.showMessageDialog(null, "You Win!", "Congratulation", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    if(attempt == 0){
+                        but1.setBackground(Color.red);
+                        JOptionPane.showMessageDialog(null, "Attempts is end!", "Alert", JOptionPane.ERROR_MESSAGE);
+                        but1.setBackground(Color.white);
+                        attempt=3;
+                        rand=Rand();
+                        labelTry.setText("Attempts left: " + attempt);
+                        labelHelper.setText("");
                     }
                 } catch (Exception e) {
                     but1.setBackground(Color.red);
@@ -69,22 +75,17 @@ public class GuessIt extends JFrame {
         but2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent a) {
-                int x1 = Integer.parseInt(Input.getText().trim());
-                try {
-                    attempt = 2;
+                    attempt = 3;
                     rand = Rand();
+                    Input.setText(null);
                     labelTry.setText("Attempts left: 3");
                     labelHelper.setText("");
                     but1.setBackground(Color.white);
                 }
-                catch (Exception e){
-                    but1.setBackground(Color.red);
-                    JOptionPane.showMessageDialog(null, "Error in Numbers!", "Alert", JOptionPane.ERROR_MESSAGE);
-                }
-            }
         });
     }
-    public int Rand(){
+    public int Rand()
+    {
         return (int) (Math.random()*20);
     }
     public static void main (String[]args)
