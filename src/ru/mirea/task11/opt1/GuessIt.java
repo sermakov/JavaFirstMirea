@@ -1,11 +1,9 @@
-package ru.mirea.task11;
+package ru.mirea.task11.opt1;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 public class GuessIt extends JFrame {
     int attempt = 3;
