@@ -1,6 +1,7 @@
 package ru.mirea.task11.opt3;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 
 public class TextEditor extends JFrame {
@@ -13,8 +14,12 @@ public class TextEditor extends JFrame {
         JTextField Input = new JTextField(10);
         Input.setBounds(325,400,150,30);
         frame.add(Input);
-        JMenuBar menuBar = new JMenuBar();
-        setJMenuBar(menuBar);
+        JMenuBar bar = new JMenuBar();
+        frame.setJMenuBar(bar);
+        JMenu color = new JMenu("Color");
+        bar.add(color);
+        JMenu font = new JMenu("Font");
+        bar.add(font);
         frame.setVisible(true);
     }
     public static void main (String[]args)
