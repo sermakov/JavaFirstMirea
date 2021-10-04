@@ -11,7 +11,7 @@ public class GuessIt extends JFrame {
     public GuessIt() {
         JFrame frame = new JFrame("GuessIt");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setBackground(Color.GRAY);
+        frame.getContentPane().setBackground(Color.cyan);
         frame.setSize(800, 600);
         JButton but1 = new JButton("Guess");
         but1.setBounds(325, 500, 150, 30);
@@ -57,7 +57,7 @@ public class GuessIt extends JFrame {
                     }
                     if(attempt == 0){
                         but1.setBackground(Color.red);
-                        JOptionPane.showMessageDialog(null, "Attempts is end!", "Alert", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Attempts is end! Guessed number was: " +rand, "Alert", JOptionPane.ERROR_MESSAGE);
                         but1.setBackground(Color.white);
                         attempt=3;
                         rand=Rand();
