@@ -16,9 +16,10 @@ public class TextEditor extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setBackground(Color.white);
         frame.setSize(800, 600);
+        frame.setLocationRelativeTo(null);
         frame.setLayout(null);
-        JTextField Input = new JTextField(10);
-        Input.setBounds(325,400,150,30);
+        JTextArea Input = new JTextArea();
+        Input.setBounds(0,0,800,600);
         frame.add(Input);
         JMenuBar bar = new JMenuBar();
         frame.setJMenuBar(bar);
