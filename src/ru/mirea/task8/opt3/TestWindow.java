@@ -11,8 +11,7 @@ public class TestWindow {
         frame.setBackground(Color.white);
         frame.setSize(300, 300);
         frame.setResizable(false);
-        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
-        frame.setLocation((int) ((dimension.getWidth() - frame.getWidth()) / 2), (int) ((dimension.getHeight() - frame.getHeight()) / 2));
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         JLabel picture = new JLabel("", JLabel.CENTER);
         frame.add(picture);

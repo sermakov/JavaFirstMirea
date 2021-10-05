@@ -75,7 +75,6 @@ public class Window extends JFrame {
         add(pnl[8]);
         setSize(800,600);
         setTitle("Football");
-
     }
     public static void main(String[]args)
     {

@@ -10,10 +10,7 @@ public class MouseEntered extends JFrame{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 350);
         frame.setResizable(false);
-        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
-        int x = (int) ((dimension.getWidth() - frame.getWidth()) / 2);
-        int y = (int) ((dimension.getHeight() - frame.getHeight()) / 2);
-        frame.setLocation(x, y);
+        frame.setLocationRelativeTo(null);
         JLabel center = new JLabel("Center", SwingConstants.CENTER);
         JLabel north = new JLabel("North", SwingConstants.CENTER);
         JLabel south = new JLabel("South", SwingConstants.CENTER);
@@ -25,7 +22,6 @@ public class MouseEntered extends JFrame{
         frame.add(east, BorderLayout.EAST);
         frame.add(west, BorderLayout.WEST);
         frame.setVisible(true);
-
         center.addMouseListener(new MouseAdapter() {
             public void mouseEntered(MouseEvent evt) {
                 frame.setTitle("You are in Center");
