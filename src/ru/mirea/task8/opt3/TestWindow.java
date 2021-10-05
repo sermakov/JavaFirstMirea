@@ -17,13 +17,10 @@ public class TestWindow {
         frame.add(picture);
 
         while(true) {
-            frame.setBackground(Color.white);
             picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\0.gif","test"));
             Thread.sleep(200);
-            frame.setBackground(Color.white);
             picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\1.gif","test"));
             Thread.sleep(200);
-            frame.setBackground(Color.white);
             picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\2.gif","test"));
             Thread.sleep(200);
             picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\3.gif","test"));
