@@ -13,6 +13,9 @@ public class Student {
     public int getID(){
         return this.iDNumber;
     }
+    public int getFinalScore(){
+        return this.finalScore;
+    }
 
     @Override
     public String toString() {
