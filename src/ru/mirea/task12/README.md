@@ -14,4 +14,3 @@
 ## Дополнительные материалы
 
 [Алгоритмы сортировки в теории и на практике (javarush.ru)](https://javarush.ru/groups/posts/1997-algoritmih-sortirovki-v-teorii-i-na-praktike)
-

@@ -17,21 +17,21 @@ public class TestWindow {
         frame.add(picture);
 
         while(true) {
-            picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\0.gif","test"));
+            picture.setIcon(new ImageIcon("C:\\Users\\IVC1-5\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\0.gif","test"));
             Thread.sleep(200);
-            picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\1.gif","test"));
+            picture.setIcon(new ImageIcon("C:\\Users\\IVC1-5\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\1.gif","test"));
             Thread.sleep(200);
-            picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\2.gif","test"));
+            picture.setIcon(new ImageIcon("C:\\Users\\IVC1-5\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\2.gif","test"));
             Thread.sleep(200);
-            picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\3.gif","test"));
+            picture.setIcon(new ImageIcon("C:\\Users\\IVC1-5\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\3.gif","test"));
             Thread.sleep(200);
-            picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\4.gif","test"));
+            picture.setIcon(new ImageIcon("C:\\Users\\IVC1-5\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\4.gif","test"));
             Thread.sleep(200);
-            picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\5.gif","test"));
+            picture.setIcon(new ImageIcon("C:\\Users\\IVC1-5\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\5.gif","test"));
             Thread.sleep(200);
-            picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\6.gif","test"));
+            picture.setIcon(new ImageIcon("C:\\Users\\IVC1-5\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\6.gif","test"));
             Thread.sleep(200);
-            picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\7.gif","test"));
+            picture.setIcon(new ImageIcon("C:\\Users\\IVC1-5\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\7.gif","test"));
             Thread.sleep(200);
             picture.setIcon(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task8\\opt3\\8.gif","test"));
             Thread.sleep(200);
