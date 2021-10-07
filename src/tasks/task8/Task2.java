@@ -7,7 +7,7 @@ public class Task2
     {
         JFrame frame = new JFrame("Task2");
         frame.setSize(500,523);
-        ImageIcon icon = new ImageIcon("");
+        ImageIcon icon = new ImageIcon("D:\\IntelliJ IDEA Community Edition 2021.2.1\\JavaFirstMirea\\src\\tasks\\task8\\img2.png");
         for (String arg : args)
         {
             icon = new ImageIcon(arg);

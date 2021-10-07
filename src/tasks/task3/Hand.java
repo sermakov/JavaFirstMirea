@@ -17,7 +17,7 @@ public class Hand
 
     public void lower()
     {
-        up = true;
+        up = false;
     }
 
     public void getPosition()

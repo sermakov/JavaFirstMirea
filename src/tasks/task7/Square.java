@@ -47,7 +47,4 @@ public class Square extends Rectangle
         else
             return("a " + width + " by " + length + " not filled " + color + " square");
     }
-
-    protected double width;
-    protected double length;
 }
