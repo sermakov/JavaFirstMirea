@@ -18,6 +18,7 @@ public class Foot extends JFrame {
     private int last = 0;
 
     public Foot() {
+
         setContentPane(rootPanel);
         setSize(500, 500);
         changeInformation();
@@ -98,5 +99,4 @@ public class Foot extends JFrame {
     public JComponent $$$getRootComponent$$$() {
         return rootPanel;
     }
-
 }
