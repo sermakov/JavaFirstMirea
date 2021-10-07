@@ -17,6 +17,6 @@ public class Task1
 
     public static void main(String[] args)
     {
-        triangle(11, 0, 0, 1);
+        triangle(10, 0, 0, 1);
     }
 }

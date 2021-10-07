@@ -28,6 +28,6 @@ public class Task4
 
     public static void main(String[] args)
     {
-        ks(1, 9, 0, 0, 0);
+        ks(2, 5, 0, 0, 0);
     }
 }

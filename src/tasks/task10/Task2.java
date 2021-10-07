@@ -12,6 +12,6 @@ public class Task2
 
     public static void main(String[] args)
     {
-        row(1, 11);
+        row(5, 7);
     }
 }
