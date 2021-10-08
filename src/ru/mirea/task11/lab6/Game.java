@@ -81,7 +81,6 @@ public class Game extends JFrame {
     }
 
     private void pass() {
-        tries++;
         int p = 0;
         try {
             p = Integer.parseInt(keyboard.getText());
@@ -89,6 +88,7 @@ public class Game extends JFrame {
             keyboard.setText("");
             return;
         }
+        tries++;
         if (p == password) status = 2;
         else if (p > password) status = 3;
         else status = 4;
