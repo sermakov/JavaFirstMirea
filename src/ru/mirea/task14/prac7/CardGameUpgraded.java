@@ -26,7 +26,7 @@ public class CardGameUpgraded {
 
     public static void run() throws Exception {
         CardGameUpgraded game = new CardGameUpgraded();
-    }
+    }s
 
     public void round(Player[] players) {
         ArrayList<Player> playingPlayers = Arrays.stream(players).filter(player -> !player.isEmpty()).collect(Collectors.toCollection(ArrayList::new));
