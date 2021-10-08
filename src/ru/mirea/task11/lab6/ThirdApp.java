@@ -24,7 +24,7 @@ public class ThirdApp {
         panel.add(area, BorderLayout.CENTER);
         frame.add(panel);
 
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setJMenuBar(menuBar);
         frame.pack();
         frame.setVisible(true);
