@@ -256,7 +256,7 @@ interface Movable {
     void moveDown();
     void moveLeft();
     void moveRight();
-};
+}
 
 class MovablePoint implements Movable {
     int x;
@@ -300,11 +300,11 @@ class MovablePoint implements Movable {
     public void moveDown() {
         this.y-=this.ySpeed;
     }
-};
+}
 
 class MovableCircle implements Movable {
-    private int radius;
-    private MovablePoint center;
+    private final int radius;
+    private final MovablePoint center;
 
     public MovableCircle(int x, int y, int xSpeed, int ySpeed, int radius){
         center = new MovablePoint(x, y, xSpeed, ySpeed);
@@ -341,8 +341,8 @@ class MovableCircle implements Movable {
 }
 
 class MovableRectangle implements Movable {
-    private MovablePoint topLeft;
-    private MovablePoint bottomRight;
+    private final MovablePoint topLeft;
+    private final MovablePoint bottomRight;
 
     public MovableRectangle(int x1, int y1, int x2, int y2, int xSpeed, int ySpeed) {
         int top = max(y1, y2);

@@ -6,14 +6,14 @@ public class Lab4 {
     }
     public static void test() {
         class Pig implements Nameable {
-            String name = "Свинка Зеппа";
+            final String name = "Свинка Зеппа";
             @Override
             public String getName() {
                 return name;
             }
         }
         class Bread implements Priceable {
-            public int price = 50;
+            public final int price = 50;
             @Override
             public int getPrice() {
                 return price;
@@ -28,9 +28,9 @@ public class Lab4 {
 }
 
 interface Nameable {
-    public String getName();
+    String getName();
 }
 
 interface Priceable {
-    public int getPrice();
+    int getPrice();
 }

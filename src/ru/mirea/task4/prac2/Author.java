@@ -1,8 +1,9 @@
 package ru.mirea.task4.prac2;
 
 public class Author {
-    private String name, email;
-    private char gender;
+    private final String name;
+    private String email;
+    private final char gender;
 
     public String getName() {
         return name;

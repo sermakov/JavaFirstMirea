@@ -9,7 +9,7 @@ public class SortingTester {
         System.out.print("Input count of students: ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        Student listOfStudent[] = new Student[n];
+        Student[] listOfStudent = new Student[n];
         input.input(listOfStudent, n);
 
 
