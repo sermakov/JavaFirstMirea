@@ -1,14 +1,29 @@
 package ru.mirea.task10.prac5;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
+import java.util.concurrent.ExecutionException;
 
 public class Prac5 {
     public static void main(String[] args) throws Exception {
-        System.out.println(Exercises.ex17());
-        Exercises.ex1();
-        Exercises.ex2();
-        Exercises.ex3();
-        Exercises.ex4();
+        //Exercises.ex1();
+        //Exercises.ex2();
+        //Exercises.ex3();
+        //Exercises.ex4();
+        Exercises.ex5();
+        Exercises.ex6();
+        Exercises.ex7();
+        Exercises.ex8();
+        Exercises.ex9();
+        Exercises.ex10();
+        Exercises.ex11();
+        Exercises.ex12();
+        Exercises.ex13();
+        Exercises.ex14();
+        Exercises.ex15();
+        Exercises.ex16();
+        //System.out.println(Exercises.ex17());
     }
 
 }
@@ -89,9 +104,6 @@ class Exercises {
         System.out.println(digitSum(n));
 
     }
-    public static void main(String[] args) {
-        System.out.println(simple(23));
-    }
 
     private static boolean simple(int digit){
         if (digit==1){return true;}
@@ -108,6 +120,67 @@ class Exercises {
         else{
             return simple(digit, div-1);
         }
+    }
+    public static void ex6() {
+        System.out.println(simple(23));
+    }
+    public static void ex7() {
+        int digit = 24;
+        int temp = digit;
+        String out="";
+        for (int i=2; i<=digit; i++){
+            while(temp%i==0 && simple(i)){
+                temp/=i;
+                out+=Integer.toString(i)+" ";
+            }
+        }
+        System.out.println(out);
+    }
+
+    private static String palindrom(@NotNull String str){
+        if (str.charAt(0)==str.charAt(str.length()-1)){
+            return palindrom(str,1);
+        }
+        else {return "NO";}
+    }
+
+    private static String palindrom(@NotNull String str, int i){
+        if (i>str.length()/2){
+            return "YES";
+        }
+        if (str.charAt(i)==str.charAt(str.length()-1-i)){
+            return palindrom(str, ++i);
+        }
+        else{
+            return "NO";
+        }
+    }
+    //Палиндром
+    public static void ex8() {
+        System.out.println(palindrom("ДОВjhgОД"));
+    }
+
+    private static int rec9(int a,int b){
+        if (a-1>b){
+            return 0;
+        }
+        if (a==0 || b==0){
+            return 1;
+        }
+        return rec9(a,b-1)+rec9(a-1,b-1);
+    }
+    public static void ex9() {
+        System.out.println(rec9(2, 2));
+    }
+    private static int rec10(int x, int n) {
+        if (x <= 0) return 0;
+        return (int) (x%10*Math.pow(10, n)+rec10(x/10, n-1));
+    }
+    public static void ex10() {
+        Scanner sc = new  Scanner(System.in);
+        int x = sc.nextInt();
+        int n = (int) Math.log10(x);
+        System.out.println(rec10(x, n));
     }
     public static int count1() {
         Scanner scanner = new Scanner(System.in);
@@ -128,6 +201,7 @@ class Exercises {
     public static void ex11() {
         System.out.println(count1());
     }
+
 
     public static void printSeries12() {
         Scanner scanner = new Scanner(System.in);
