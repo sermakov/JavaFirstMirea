@@ -24,7 +24,7 @@ public class Game extends JFrame {
         change();
         setVisible(true);
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         keyboard.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
