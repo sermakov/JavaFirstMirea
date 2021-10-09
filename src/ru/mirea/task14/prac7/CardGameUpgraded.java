@@ -11,11 +11,10 @@ public class CardGameUpgraded {
 
     private CardGameUpgraded() throws FileNotFoundException {
         Scanner reader = new Scanner(new FileInputStream("src/ru/mirea/task14/prac7/input2.txt"));
-        int playerAmount = Integer.parseInt(reader.nextLine());
-        Player[] players = new Player[playerAmount];
-        for (int i = 0; i < players.length; i++) {
+        ArrayList<Player> players = new ArrayList<>();
+        for (int i = 0; reader.hasNextLine(); i++) {
             Player p = new Player();
-            players[i] = p;
+            players.add(p);
 
             String[] deck = reader.nextLine().split(" ");
             Arrays.stream(deck).forEach(s -> p.takeCard(Integer.parseInt(s)));
@@ -28,7 +27,8 @@ public class CardGameUpgraded {
         CardGameUpgraded game = new CardGameUpgraded();
     }
 
-    public void round(Player[] players) {
+    public void round(ArrayList<Player> playersL) {
+        Player[] players = playersL.toArray(new Player[0]);
         ArrayList<Player> playingPlayers = Arrays.stream(players).filter(player -> !player.isEmpty()).collect(Collectors.toCollection(ArrayList::new));
         while (playingPlayers.size() > 1) {
             playingPlayers = Arrays.stream(players).filter(player -> !player.isEmpty()).collect(Collectors.toCollection(ArrayList::new));
