@@ -7,19 +7,17 @@ import java.util.Stack;
 
 public class CardGameConsole {
 
-    private static final int NUMBER_OF_CARDS = 10;
-
     public static void run() throws FileNotFoundException {
         Scanner reader = new Scanner(new FileInputStream("src/ru/mirea/task14/prac7/input.txt"));
         Stack<Integer> firstPlayerCards = new Stack<>();
         Stack<Integer> secondPlayerCards = new Stack<>();
         String[] playerOneDeck = reader.nextLine().split(" ");
         String[] playerTwoDeck = reader.nextLine().split(" ");
-        for (int i = 0; i < NUMBER_OF_CARDS / 2; ++i) {
-            firstPlayerCards.push(Integer.parseInt(playerOneDeck[NUMBER_OF_CARDS / 2 - i - 1]));
+        for (int i = playerOneDeck.length-1; i >= 0; i--) {
+            firstPlayerCards.push(Integer.parseInt(playerOneDeck[i]));
         }
-        for (int i = 0; i < NUMBER_OF_CARDS / 2; ++i) {
-            secondPlayerCards.push(Integer.parseInt(playerTwoDeck[NUMBER_OF_CARDS / 2 - i - 1]));
+        for (int i = playerTwoDeck.length-1; i >= 0; i--) {
+            secondPlayerCards.push(Integer.parseInt(playerTwoDeck[i]));
         }
         int turnCount = 0;
         while (!firstPlayerCards.empty() && !secondPlayerCards.empty()) {
@@ -29,12 +27,12 @@ public class CardGameConsole {
             }
             int firstPlayerCard = firstPlayerCards.pop();
             int secondPlayerCard = secondPlayerCards.pop();
-            if (firstPlayerCard < secondPlayerCard || (firstPlayerCard == 9 && secondPlayerCard == 0)) {
-                secondPlayerCards.add(0, firstPlayerCard);
-                secondPlayerCards.add(0, secondPlayerCard);
-            } else {
+            if (firstPlayerCard < secondPlayerCard) {
                 firstPlayerCards.add(0, firstPlayerCard);
                 firstPlayerCards.add(0, secondPlayerCard);
+            } else {
+                secondPlayerCards.add(0, firstPlayerCard);
+                secondPlayerCards.add(0, secondPlayerCard);
             }
             ++turnCount;
         }

@@ -16,10 +16,10 @@ public class CardGameDoubleLinkedList {
         // Again duplicate... (mb create another function?)
         String[] playerOneDeck = reader.nextLine().split(" ");
         String[] playerTwoDeck = reader.nextLine().split(" ");
-        for (int i = 0; i < NUMBER_OF_CARDS / 2; ++i) {
+        for (int i = 0; i < playerOneDeck.length; ++i) {
             firstPlayerCards.add(Integer.parseInt(playerOneDeck[i]));
         }
-        for (int i = 0; i < NUMBER_OF_CARDS / 2; ++i) {
+        for (int i = 0; i < playerTwoDeck.length; ++i) {
             secondPlayerCards.add(Integer.parseInt(playerTwoDeck[i]));
         }
         int turnCount = 0;
@@ -31,11 +31,11 @@ public class CardGameDoubleLinkedList {
             int firstPlayerCard = firstPlayerCards.remove(0);
             int secondPlayerCard = secondPlayerCards.remove(0);
             if (firstPlayerCard < secondPlayerCard || (firstPlayerCard == 9 && secondPlayerCard == 0)) {
-                secondPlayerCards.add(firstPlayerCard);
-                secondPlayerCards.add(secondPlayerCard);
-            } else {
                 firstPlayerCards.add(firstPlayerCard);
                 firstPlayerCards.add(secondPlayerCard);
+            } else {
+                secondPlayerCards.add(firstPlayerCard);
+                secondPlayerCards.add(secondPlayerCard);
             }
             ++turnCount;
         }

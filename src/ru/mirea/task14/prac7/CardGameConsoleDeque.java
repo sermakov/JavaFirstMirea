@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class CardGameConsoleDeque {
-    private static final int NUMBER_OF_CARDS = 10;
 
     public static void run() throws FileNotFoundException {
         Scanner reader = new Scanner(new FileInputStream("src/ru/mirea/task14/prac7/input.txt"));
@@ -14,10 +13,10 @@ public class CardGameConsoleDeque {
         // Duplicate...
         String[] playerOneDeck = reader.nextLine().split(" ");
         String[] playerTwoDeck = reader.nextLine().split(" ");
-        for (int i = 0; i < NUMBER_OF_CARDS / 2; ++i) {
+        for (int i = 0; i < playerOneDeck.length; ++i) {
             firstPlayerCards.add(Integer.parseInt(playerOneDeck[i]));
         }
-        for (int i = 0; i < NUMBER_OF_CARDS / 2; ++i) {
+        for (int i = 0; i < playerTwoDeck.length; ++i) {
             secondPlayerCards.add(Integer.parseInt(playerTwoDeck[i]));
         }
         int turnCount = 0;
@@ -28,12 +27,12 @@ public class CardGameConsoleDeque {
             }
             int firstPlayerCard = firstPlayerCards.remove();
             int secondPlayerCard = secondPlayerCards.remove();
-            if (firstPlayerCard < secondPlayerCard || (firstPlayerCard == 9 && secondPlayerCard == 0)) {
-                secondPlayerCards.add(firstPlayerCard);
-                secondPlayerCards.add(secondPlayerCard);
-            } else {
+            if (firstPlayerCard < secondPlayerCard) {
                 firstPlayerCards.add(firstPlayerCard);
                 firstPlayerCards.add(secondPlayerCard);
+            } else {
+                secondPlayerCards.add(firstPlayerCard);
+                secondPlayerCards.add(secondPlayerCard);
             }
             ++turnCount;
         }
