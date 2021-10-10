@@ -1,9 +1,7 @@
-package ru.mirea.task2.prac1;
-
-import ru.mirea.task2.prac1.ball.Ball;
-import ru.mirea.task2.prac1.book.TestBook;
-import ru.mirea.task2.prac1.dog.TestDog;
-import ru.mirea.task2.prac1.shape.ShapeTester;
+import ball.Ball;
+import book.TestBook;
+import dog.TestDog;
+import shape.ShapeTester;
 
 public class Prac1 {
     public static void main(String[] args) {

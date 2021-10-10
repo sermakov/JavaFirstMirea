@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaFirstMirea.iml" filepath="$PROJECT_DIR$/JavaFirstMirea.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/ru/mirea/task1/lab1/lab1.iml" filepath="$PROJECT_DIR$/src/ru/mirea/task1/lab1/lab1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/ru/mirea/task2/prac1/prac1.iml" filepath="$PROJECT_DIR$/src/ru/mirea/task2/prac1/prac1.iml" />
     </modules>
   </component>
 </project>

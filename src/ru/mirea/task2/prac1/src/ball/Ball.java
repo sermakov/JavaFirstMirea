@@ -1,4 +1,4 @@
-package ru.mirea.task2.prac1.ball;
+package ball;
 
 public class Ball {
     int size = 0;

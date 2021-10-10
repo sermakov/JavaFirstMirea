@@ -1,4 +1,4 @@
-package ru.mirea.task2.prac1.dog;
+package dog;
 
 import java.util.Arrays;
 

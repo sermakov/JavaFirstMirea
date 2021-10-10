@@ -1,4 +1,4 @@
-package ru.mirea.task2.prac1.book;
+package book;
 
 public class TestBook {
     public static void test() {
