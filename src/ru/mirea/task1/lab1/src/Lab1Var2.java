@@ -1,5 +1,3 @@
-package ru.mirea.task1.lab1;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;

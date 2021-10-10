@@ -1,5 +1,3 @@
-package ru.mirea.task1.lab1;
-
 import java.util.Arrays;
 import java.util.Random;
 
