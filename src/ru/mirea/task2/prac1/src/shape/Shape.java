@@ -1,4 +1,4 @@
-package ru.mirea.task2.prac1.shape;
+package shape;
 
 public class Shape {
     public int area = 0;
