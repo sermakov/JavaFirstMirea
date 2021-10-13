@@ -7,7 +7,7 @@ import java.awt.*;
 public class GameInterface extends JFrame {
 
     public GameInterface(){
-        super("Игра");
+        super("Пьяница");
         setSize(480, 140);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
