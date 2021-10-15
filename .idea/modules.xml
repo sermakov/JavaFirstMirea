@@ -4,7 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaFirstMirea.iml" filepath="$PROJECT_DIR$/JavaFirstMirea.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/ru/mirea/task1/lab1/lab1.iml" filepath="$PROJECT_DIR$/src/ru/mirea/task1/lab1/lab1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2/lab2.iml" filepath="$PROJECT_DIR$/lab2/lab2.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/ru/mirea/task2/prac1/prac1.iml" filepath="$PROJECT_DIR$/src/ru/mirea/task2/prac1/prac1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/ru/mirea/task10/prac5/prac5.iml" filepath="$PROJECT_DIR$/src/ru/mirea/task10/prac5/prac5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/ru/mirea/task15/prac8/prac8.iml" filepath="$PROJECT_DIR$/src/ru/mirea/task15/prac8/prac8.iml" />
     </modules>
   </component>
 </project>

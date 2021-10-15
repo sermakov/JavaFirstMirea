@@ -1,4 +1,3 @@
-package ru.mirea.task3.lab2;
 import ru.mirea.task2.prac1.book.TestBook;
 import ru.mirea.task3.lab2.circle.CircleTest;
 import ru.mirea.task3.lab2.human.HumanTest;

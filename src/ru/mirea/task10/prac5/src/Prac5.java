@@ -1,5 +1,3 @@
-package ru.mirea.task10.prac5;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
