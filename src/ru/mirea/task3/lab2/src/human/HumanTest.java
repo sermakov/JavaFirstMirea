@@ -1,4 +1,4 @@
-package ru.mirea.task3.lab2.human;
+package human;
 
 public class HumanTest {
     public static void test() {

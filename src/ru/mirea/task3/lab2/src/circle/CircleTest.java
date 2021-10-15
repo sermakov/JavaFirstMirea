@@ -1,4 +1,4 @@
-package ru.mirea.task3.lab2.circle;
+package circle;
 
 public class CircleTest {
     public static void test() {
