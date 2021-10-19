@@ -46,7 +46,6 @@ public class MyCollection <T>{
       */
     public void remove(int index) {
         if (index < 0 || index >= count) return;
-
         for (int i = index; i<count; i++)
             array[i] = array[i+1];
         array[count] = null;
