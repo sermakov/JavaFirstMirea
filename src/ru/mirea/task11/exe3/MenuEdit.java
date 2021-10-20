@@ -4,12 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.collections.*;
 import javafx.stage.Stage;
-import javafx.scene.text.Text.*;
-import javafx.scene.paint.*;
 import javafx.scene.text.*;
 public class MenuEdit extends Application {
     Label l;
@@ -23,15 +18,15 @@ public class MenuEdit extends Application {
 
         ContextMenu contextMenu = new ContextMenu();
 
-        MenuItem menuItem1 = new MenuItem("Enable Bold font");
-        MenuItem menuItem4 = new MenuItem("Edit color black");
-        MenuItem menuItem3 = new MenuItem("Edit color red");
-        MenuItem menuItem2 = new MenuItem("Disable Bold font");
+        MenuItem enableBold = new MenuItem("Enable Bold font");
+        MenuItem toRedColor = new MenuItem("Edit color black");
+        MenuItem toBlackColor = new MenuItem("Edit color red");
+        MenuItem disableBold = new MenuItem("Disable Bold font");
 
-        contextMenu.getItems().add(menuItem1);
-        contextMenu.getItems().add(menuItem2);
-        contextMenu.getItems().add(menuItem3);
-        contextMenu.getItems().add(menuItem4);
+        contextMenu.getItems().add(enableBold);
+        contextMenu.getItems().add(disableBold);
+        contextMenu.getItems().add(toBlackColor);
+        contextMenu.getItems().add(toRedColor);
 
         TilePane tilePane = new TilePane(text);
 
@@ -39,10 +34,10 @@ public class MenuEdit extends Application {
 
         Scene sc = new Scene(tilePane, 200, 200);
 
-        menuItem1.setOnAction(actionEvent -> text.setFont(Font.font("Verdana", FontWeight.BOLD, 16)));
-        menuItem2.setOnAction(actionEvent-> text.setFont(Font.font("Verdana", FontWeight.NORMAL, 16)));
-        menuItem3.setOnAction(actionEvent -> text.setStyle("-fx-text-fill: red; -fx-font-size: 16px;"));
-        menuItem4.setOnAction(actionEvent -> text.setStyle("-fx-text-fill: black; -fx-font-size: 16px;"));
+        enableBold.setOnAction(actionEvent -> text.setStyle("-fx-font-weight: bold"));//text.setFont(Font.font("Verdana", FontWeight.BOLD, 16)));
+        disableBold.setOnAction(actionEvent-> text.setStyle("-fx-font-weight: regular"));//text.setFont(Font.font("Verdana", FontWeight.NORMAL, 16)));
+        toBlackColor.setOnAction(actionEvent -> text.setStyle("-fx-text-fill: red; -fx-font-size: 16px;"));
+        toRedColor.setOnAction(actionEvent -> text.setStyle("-fx-text-fill: black; -fx-font-size: 16px;"));
 
 
 
