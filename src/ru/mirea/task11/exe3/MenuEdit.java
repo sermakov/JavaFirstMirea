@@ -11,7 +11,7 @@ public class MenuEdit extends Application {
 
     public void start(Stage stage)
     {
-        stage.setTitle("creating contextMenu ");
+        stage.setTitle("Creating contextMenu ");
 
         TextArea text = new TextArea("");
         text.setFont(Font.font("Verdana", FontWeight.NORMAL, 16));
