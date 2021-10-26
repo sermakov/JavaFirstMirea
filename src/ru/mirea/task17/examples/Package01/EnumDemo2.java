@@ -1,4 +1,4 @@
-package Chapter12.Package01;
+package ru.mirea.task17.examples.package01;
 
 // В программе демонстрируется применение методов values() и valueOf()
 class EnumDemo2 {

@@ -1,4 +1,4 @@
-package Chapter12.Package02;
+package ru.mirea.task17.examples.package02;
 
 // Использовать конструктор, переменную экземпляра и метод в перечислении
 enum Apple3 {

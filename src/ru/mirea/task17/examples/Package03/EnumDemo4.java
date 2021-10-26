@@ -1,4 +1,4 @@
-package Chapter12.Package03;
+package ru.mirea.task17.examples.package03;
 
 // Продемонстрировать применение методов ordinal(), compareTo() и equals()
 enum Apple4 {
