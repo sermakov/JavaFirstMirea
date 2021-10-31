@@ -25,8 +25,6 @@ public class BrainStorm {
         System.out.print(bs9.diferent(n0,n1));
     }
     public int diferent(int n0, int n1) {
-        if ((n0==0) || (n1 ==0))
-            return 0;
         if(n0==0)
             return 1;
         if(n1==0 && n0>1)
