@@ -13,5 +13,7 @@
 
 ## Дополнительные материалы
 
+[Swing в Java: создание графического интерфейса (hr-vector.com)](https://hr-vector.com/java/swing-graficheskij-interfejs)
+
 [Введение в Java FX (javarush.ru)](https://javarush.ru/groups/posts/2560-vvedenie-v-java-fx)
 
