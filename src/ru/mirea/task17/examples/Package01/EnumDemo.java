@@ -1,9 +1,4 @@
-package ru.mirea.task17.examples.package01;
-
-// Пример, Перечисление сортов яблок
-enum Apple {
-    Jonathan, GoldenDel, RedDel, Winesap, Cortland
-}
+package ru.mirea.task17.examples.Package01;
 
 class EnumDemo {
     public static void main(String[] args) {
