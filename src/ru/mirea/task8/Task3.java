@@ -10,7 +10,7 @@ public class Task3
 {
     public static void main(String[] args) throws IOException, InterruptedException
     {
-        BufferedImage image = ImageIO.read(new File("D:\\IntelliJ IDEA Community Edition 2021.2.1\\Java\\src\\tasks\\task8\\skin2.png"));
+        BufferedImage image = ImageIO.read(new File("D:\\IntelliJ IDEA Community Edition 2021.2.1\\JavaFirstMirea\\src\\ru\\mirea\\task8\\skin2.png"));
         BufferedImage subImage = image.getSubimage(0, 0, 1, 1);
         JFrame frame = new JFrame("Task3");
         frame.setVisible(true);
