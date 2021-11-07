@@ -1,7 +1,13 @@
-package ru.mirea.task16;
+package ru.mirea.task17;
 
 import java.util.LinkedList;
 import java.util.Objects;
+
+enum Item
+{
+    Камень,
+    Ключ
+}
 
 public class Game
 {
@@ -22,7 +28,8 @@ public class Game
             case 10000000:
             {
                 System.out.println("Вы находитесь в первой комнате.");
-                System.out.println("Спереди вы видите проход.\n\n");
+                System.out.println("Спереди вы видите дверь.");
+                System.out.println("На двери спереди висит ключ.\n\n");
                 break;
             }
             case 10000001:
@@ -32,29 +39,60 @@ public class Game
                 System.out.println("Сзади вы видите проход.\n\n");
                 break;
             }
+            case 10000002:
+            {
+                System.out.println("Вы находитесь в первой комнате.");
+                System.out.println("Спереди вы видите дверь.\n\n");
+                break;
+            }
+            case 10000003:
+            {
+                System.out.println("Вы находитесь в первой комнате.");
+                System.out.println("Спереди вы видите проход.\n\n");
+                break;
+            }
             case 20000000:
             {
                 System.out.println("Вы перешли в первую комнату.\n\n");
-                sceneNum = 0;
+                sceneNum = 2;
+                break;
+            }
+            case -20000001:
+            {
+                System.out.println("Дверь заперта.\n\n");
                 break;
             }
             case 20000001:
             {
                 System.out.println("Вы перешли во вторую комнату.\n\n");
+                sceneNum = 3;
+                break;
+            }
+            case 30000000:
+            {
+                System.out.println("Вы подобрали ключ.\n\n");
+                inventory.add(Item.Ключ);
                 sceneNum = 1;
                 break;
             }
             case 30000001:
             {
                 System.out.println("Вы подобрали камень.\n\n");
-                inventory.add("камень");
+                inventory.add(Item.Камень);
+                break;
+            }
+            case 40000000:
+            {
+                System.out.println("Вы открыли дверь ключом.\n\n");
+                inventory.remove(Item.Ключ);
+                sceneNum = 2;
                 break;
             }
             case 90000000:
             {
-                for (String i : inventory)
+                for (Item i : inventory)
                 {
-                    if (i == "камень")
+                    if (i == Item.Камень)
                     {
                         System.out.println("Вы съели камень. Победа!\n\n");
                         while (true){}
@@ -68,5 +106,5 @@ public class Game
 
     public int sceneNum = 0;
     public Scene scene[];
-    public LinkedList<String> inventory = new LinkedList<>();
+    public LinkedList<Item> inventory = new LinkedList<>();
 }

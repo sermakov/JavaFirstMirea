@@ -35,8 +35,6 @@ public class Main
         response[1][2] = 30000001;
         response[1][3] = 90000000;
 
-        System.out.println(new File("").getAbsolutePath());
-
         scene[0] = new Scene("./AMOGUS II/sample.png", action[0], response[0]);
         scene[1] = new Scene("./AMOGUS II/sample.png", action[1], response[1]);
         G.scene = scene;
