@@ -1,5 +1,5 @@
 package ru.mirea.task16;
-//тест базовых механик, без графики
+//тест базовых механик, без графики; финальный сюжет и геймплей будут отличаться
 import java.io.IOException;
 import java.util.Scanner;
 import java.io.File;

@@ -1,5 +1,5 @@
-package ru.mirea.task17;
-//НОВОВВЕДЕНИЕ: предметы из инвентаря теперь не String, а enum Item
+package ru.mirea.task18;
+//НОВОВВЕДЕНИЕ: загадка, решение которой - деление на ноль; требует обработку исключения
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ public class Main
 {
     public static void main(String[] args) throws IOException
     {
-        int scenes = 4;
+        int scenes = 5;
 
         Game G = new Game();
         Scene[] scene = new Scene[scenes];
@@ -48,20 +48,31 @@ public class Main
         response[2][2] = 90000000;
         scene[2] = new Scene("./AMOGUS II/sample.png", action[2], response[2]);
 
-        action[3] = new String[4];
+        action[3] = new String[6];
         action[3][0] = "осмотреться";
         action[3][1] = "идти назад";
         action[3][2] = "взять камень";
         action[3][3] = "съесть камень";
-        response[3] = new int[4];
+        action[3][4] = "использовать камень на дробитель";
+        action[3][5] = "использовать дробитель";
+        response[3] = new int[6];
         response[3][0] = 10000001;
         response[3][1] = 20000000;
         response[3][2] = 30000001;
         response[3][3] = 90000000;
+        response[3][4] = 40000001;
+        response[3][5] = 40000002;
         scene[3] = new Scene("./AMOGUS II/sample.png", action[3], response[3]);
 
-        G.scene = scene;
+        action[4] = new String[2];
+        action[4][0] = "осмотреться";
+        action[4][1] = "идти назад";
+        response[4] = new int[2];
+        response[4][0] = 10000004;
+        response[4][1] = 90000001;
+        scene[4] = new Scene("./AMOGUS II/sample.png", action[4], response[4]);
 
+        G.scene = scene;
         G.act("осмотреться");
         Scanner in = new Scanner(System.in);
         String input;
