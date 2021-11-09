@@ -15,3 +15,5 @@
 
 [Пришел, увидел, обобщил: погружаемся в Java Generics / Хабр (habr.com)](https://habr.com/ru/company/sberbank/blog/416413/)
 
+[Why Use Generics? (The Java™ Tutorials > Learning the Java Language > Generics (Updated)) (oracle.com)](https://docs.oracle.com/javase/tutorial/java/generics/why.html)
+
