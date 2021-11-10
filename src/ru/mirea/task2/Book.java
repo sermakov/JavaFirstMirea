@@ -1,6 +1,11 @@
 package ru.mirea.task2;
 public class Book
 {
-    int kolsrt = 356;
+    int ks = 378;
 
+    @Override
+    public String toString() {
+        return "Book: " +
+                "ks = " + ks;
+    }
 }

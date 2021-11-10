@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b3fd1fd-11c7-4496-8569-cdd28504f243" name="Changes" comment="">
+    <list default="true" id="0b3fd1fd-11c7-4496-8569-cdd28504f243" name="Changes" comment="kfdkfkdljdskl">
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestB.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestB.java" afterDir="false" />
@@ -24,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="20kHkkLuZpDXz5pM4vMBV3tb2zT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -45,6 +47,14 @@
       <option name="presentableId" value="Default" />
       <updated>1636581813253</updated>
     </task>
+    <task id="LOCAL-00001" summary="kfdkfkdljdskl">
+      <created>1636582505141</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636582505141</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -58,5 +68,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="kfdkfkdljdskl" />
+    <option name="LAST_COMMIT_MESSAGE" value="kfdkfkdljdskl" />
   </component>
 </project>

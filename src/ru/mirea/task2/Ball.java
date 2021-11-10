@@ -1,3 +1,4 @@
+package ru.mirea.task2;
 public class Ball
 {
     int radius = 8;
@@ -5,6 +6,6 @@ public class Ball
     @Override
     public String toString() {
         return "Ball: " +
-                "\nradius=" + radius;
+                "\nradius = " + radius;
     }
 }

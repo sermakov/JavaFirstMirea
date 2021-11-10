@@ -1,3 +1,4 @@
+package ru.mirea.task2;
 public class Shape
 {
     double width = 2;
