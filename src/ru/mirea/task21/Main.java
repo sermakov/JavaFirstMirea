@@ -1,11 +1,10 @@
-package ru.mirea.task18;
-//НОВОВВЕДЕНИЕ: загадка, решение которой требует обработку исключения; прохождение снизу
-import java.io.IOException;
+package ru.mirea.task21;
+//ДЖЕНЕРИКИ уже используются в проекте в рамках типа для списка предметов (инвентаря)
 import java.util.Scanner;
 
 public class Main
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args) throws Exception
     {
         int scenes = 5;
 
@@ -79,27 +78,14 @@ public class Main
         while (true)
         {
             input = in.nextLine();
-            G.act(input);
+            try
+            {
+                G.act(input);
+            }
+            catch (Exception e)
+            {
+                System.out.println("Вы не можете найти у себя " + e.getMessage() + ".\n\n");
+            }
         }
     }
 }
-
-/*
-ПРОХОЖДЕНИЕ
-взять ключ
-использовать ключ на дверь
-идти вперёд
-осмотреться
-взять камень
-съесть камень
-взять камень
-использовать камень на дробитель
-использовать дробитель
-ВВЕСТИ ДВА ЛЮБЫХ ЦЕЛЫХ ЧИСЛА (ВТОРОЕ - НЕНУЛЕВОЕ)
-использовать дробитель
-ПОПРОБОВАТЬ ВВЕСТИ ПРОИЗВОЛЬНУЮ СТРОКУ НА ПЕРВОМ ИЛИ ВТОРОМ ЭТАПЕ
-использовать дробитель
-ВВЕСТИ ЛЮБОЕ ЧИСЛО, ЗАТЕМ ВВЕСТИ 0
-осмотреться
-идти назад
- */
