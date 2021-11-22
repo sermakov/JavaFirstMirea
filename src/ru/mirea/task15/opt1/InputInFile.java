@@ -1,6 +1,7 @@
 package ru.mirea.task15.opt1;
 
 import java.io.*;
+import java.io.FileWriter;
 
 public class InputInFile {
         public static void main(String[] args) throws IOException
