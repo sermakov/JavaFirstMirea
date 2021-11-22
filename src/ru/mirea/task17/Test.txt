@@ -1,0 +1,4 @@
+Player: d|Score: 3|Max score: 3|Date: Sun Nov 21 23:17:09 MSK 2021|1203701145
+Player: ds|Score: 3|Max score: 3|Date: Sun Nov 21 23:18:58 MSK 2021|1039084098
+Player: No name|Score: 2|Max score: 2|Date: Mon Nov 22 20:45:27 MSK 2021|691842394
+Player: No name|Score: 2|Max score: 2|Date: Mon Nov 22 20:45:54 MSK 2021|1741851347
