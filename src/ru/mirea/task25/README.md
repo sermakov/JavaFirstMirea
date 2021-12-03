@@ -9,8 +9,11 @@
 
 ## Альтернативное задание
 
-1. В разработке
+1. Реализуйте диаграмму ниже при помощи паттерна декоратор.
+
+   ![](D:\Files\OneDrive\Repository\JavaFirstMirea\src\ru\mirea\task25\Decorator.jpg)
 
 ## Дополнительные материалы
 
 [Паттерн Декоратор](https://javarush.ru/groups/posts/3426-pattern-dekorator-decorator)
+
