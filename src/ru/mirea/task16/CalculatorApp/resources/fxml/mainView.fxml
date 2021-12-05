@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="398.0" prefWidth="302.0" spacing="15.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mirea.task16.CalculatorApp.controlles.MainViewController">
+    <Label alignment="CENTER" maxWidth="600" prefHeight="56.0" prefWidth="398.0" styleClass="title2" text="Calculator v01" />
+   <ToggleButton mnemonicParsing="false" prefHeight="18.0" prefWidth="81.0" />
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label styleClass="bold" text="Expression:" />
+        <Label fx:id="accountHolder" GridPane.columnIndex="1" />
+    </GridPane>
+    <HBox alignment="CENTER" prefHeight="26.0" prefWidth="38.0" spacing="25.0">
+        <Button onAction="#handleDigit" prefWidth="45.0" text="𝝅" userData="p" />
+        <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="e" userData="e" />
+        <Button layoutX="10.0" layoutY="10.0" onAction="#handleClear" prefHeight="26.0" prefWidth="45.0" text="CE"/>
+        <Button layoutX="10.0" layoutY="10.0" onAction="#handleBackspace" prefHeight="26.0" prefWidth="105.0" text="⌫"/>
+    </HBox>
+   <HBox alignment="CENTER" spacing="25.0">
+      <children>
+         <Button onAction="#handleDigit" prefHeight="26.0" prefWidth="45.0" text="1/x" userData="1/" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefHeight="26.0" prefWidth="45.0" text="^2" userData="^2" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefHeight="26.0" prefWidth="45.0" text="exp" userData="exp(" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="ln" userData="ln(" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="√" userData="^1/2" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" spacing="25.0">
+      <children>
+         <Button onAction="#handleDigit" prefWidth="45.0" text="^y" userData="^" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="(" userData="(" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text=")" userData=")" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefHeight="26.0" prefWidth="45.0" text="y√x" userData="^1/" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="÷" userData="/" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" spacing="25.0">
+      <children>
+         <Button onAction="#handleDigit" prefHeight="26.0" prefWidth="45.0" text="cos" userData="cos(" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="7" userData="7" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="8" userData="8" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="9" userData="9" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="×" userData="*" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" spacing="25.0">
+      <children>
+         <Button onAction="#handleDigit" prefWidth="45.0" text="sin" userData="sin(" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="4" userData="4" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="5" userData="5" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="6" userData="6" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="+" userData="+" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" spacing="25.0">
+      <children>
+         <Button onAction="#handleDigit" prefWidth="45.0" text="tan" userData="tan(" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="3" userData="3" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="2" userData="2" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="1" userData="1" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="-" userData="-" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" spacing="25.0">
+      <children>
+         <Button onAction="#handleDigit" prefWidth="45.0" text="ctg" userData="1" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="0" userData="0" />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleDigit" prefWidth="45.0" text="," userData="," />
+         <Button layoutX="10.0" layoutY="10.0" onAction="#handleEval" prefHeight="26.0" prefWidth="105.0" text="=" userData="" />
+      </children>
+   </HBox>
+    <padding>
+        <Insets topRightBottomLeft="15" />
+    </padding>
+</VBox>

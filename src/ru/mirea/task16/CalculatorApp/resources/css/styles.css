@@ -1,0 +1,10 @@
+.title2{
+    -fx-background-color: #fcc200;
+    -fx-font-weight: 900;
+    -fx-padding: 10px;
+    -fx-font-size: 18pt;
+}
+
+.bold{
+    -fx-font-weight: bold;
+}
