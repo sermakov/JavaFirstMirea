@@ -11,7 +11,7 @@
 
 1. Реализуйте диаграмму ниже при помощи паттерна декоратор.
 
-   ![](D:\Files\OneDrive\Repository\JavaFirstMirea\src\ru\mirea\task25\Decorator.jpg)
+   ![](Decorator.jpg)
 
 ## Дополнительные материалы
 
