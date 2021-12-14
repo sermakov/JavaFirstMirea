@@ -15,7 +15,10 @@ public class CalculatorApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/mainView.fxml"));
         primaryStage.setTitle("MVC Calculator App");
         //primaryStage.getIcons().add(new Image(getClass().getResource("/img/EdenCodingIcon.png").toExternalForm()));
-        primaryStage.setScene(new Scene(root, 310, 475));
+        primaryStage.setScene(new Scene(root, 302, 475));
+
+        //primaryStage.getScene().getStylesheets().add("resources/css/style.css");
+
         primaryStage.show();
     }
 

@@ -12,7 +12,7 @@
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300" minWidth="300" prefHeight="520.0" prefWidth="526.0"
           xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="ru.mirea.task16.CalculatorApp.controlles.MainViewController">>
+          fx:controller="ru.mirea.task16.CalculatorApp.controlles.MainViewController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="526.0" minWidth="10.0" prefWidth="526.0"/>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.79998779296875" minWidth="0.0" prefWidth="0.0"/>
