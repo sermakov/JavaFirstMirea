@@ -3,3 +3,5 @@ Player: ds|Score: 3|Max score: 3|Date: Sun Nov 21 23:18:58 MSK 2021|1039084098
 Player: No name|Score: 2|Max score: 2|Date: Mon Nov 22 20:45:27 MSK 2021|691842394
 Player: No name|Score: 2|Max score: 2|Date: Mon Nov 22 20:45:54 MSK 2021|1741851347
 Player: dcccas|Score: 3|Max score: 3|Date: Thu Nov 25 13:03:55 MSK 2021|Your personal session code: 1670679723
+Player: fds|Score: 3|Max score: 3|Date: Tue Dec 14 21:04:11 MSK 2021|Your personal session code: 519916980
+Player: NoName|Score: 6|Max score: 20|Date: Tue Dec 14 21:05:03 MSK 2021|Your personal session code: 1523756151

@@ -39,7 +39,8 @@ public class SnakePanel extends JPanel implements ActionListener {
     boolean isStarted = false;
     boolean isFailed = false;
     boolean ready = true;
-    String name = "No name";
+    String name = "NoName";
+    String path = "C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\";
     Timer timer = new Timer(100, this);
     private  MainWindow game;
     java.util.List<String> scoreboard = new ArrayList<>();
@@ -58,7 +59,7 @@ public class SnakePanel extends JPanel implements ActionListener {
         gameName.setFont(new Font("",Font.ITALIC, 28));
         gameName.setBounds(150, 43, 150, 30);
         frame.add(gameName);
-        JLabel gamePic = new JLabel(new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Snake.jpg"));
+        JLabel gamePic = new JLabel(new ImageIcon(path + "Snake.jpg"));
         gamePic.setBounds(200, 30, 150, 50);
         frame.add(gamePic);
         JTextField Input = new JTextField(10);
@@ -111,7 +112,7 @@ public class SnakePanel extends JPanel implements ActionListener {
                 }
                 catch (NumberFormatException | NameException ex) {
                     JOptionPane.showMessageDialog(null, "Incorrect Name/Max. score!", "alert", JOptionPane.ERROR_MESSAGE);
-                    Input.setText("No name");
+                    Input.setText("NoName");
                     maxscore.setText("20");
                 }
             }
@@ -269,47 +270,47 @@ public class SnakePanel extends JPanel implements ActionListener {
     }
 
     void PaintBlue() {
-        ImageIcon image_up = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Blue\\upBlue.png");
+        ImageIcon image_up = new ImageIcon(path + "\\Blue\\upBlue.png");
         up = image_up.getImage();
-        ImageIcon image_down = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Blue\\downBlue.png");
+        ImageIcon image_down = new ImageIcon(path + "\\Blue\\downBlue.png");
         down = image_down.getImage();
-        ImageIcon image_left = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Blue\\leftBlue.png");
+        ImageIcon image_left = new ImageIcon(path + "\\Blue\\leftBlue.png");
         left = image_left.getImage();
-        ImageIcon image_right = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Blue\\rightBlue.png");
+        ImageIcon image_right = new ImageIcon(path + "\\Blue\\rightBlue.png");
         right = image_right.getImage();
-        ImageIcon image_body = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Blue\\bodyBlue.png");
+        ImageIcon image_body = new ImageIcon(path + "\\Blue\\bodyBlue.png");
         body = image_body.getImage();
-        ImageIcon image_feed = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\food.png");
+        ImageIcon image_feed = new ImageIcon(path + "\\food.png");
         feed = image_feed.getImage();
     }
 
     void PaintRed() {
-        ImageIcon image_up = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Red\\upRed.png");
+        ImageIcon image_up = new ImageIcon(path + "\\Red\\upRed.png");
         up = image_up.getImage();
-        ImageIcon image_down = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Red\\downRed.png");
+        ImageIcon image_down = new ImageIcon(path + "\\Red\\downRed.png");
         down = image_down.getImage();
-        ImageIcon image_left = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Red\\leftRed.png");
+        ImageIcon image_left = new ImageIcon(path + "\\Red\\leftRed.png");
         left = image_left.getImage();
-        ImageIcon image_right = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Red\\rightRed.png");
+        ImageIcon image_right = new ImageIcon(path + "\\Red\\rightRed.png");
         right = image_right.getImage();
-        ImageIcon image_body = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Red\\bodyRed.png");
+        ImageIcon image_body = new ImageIcon(path + "\\Red\\bodyRed.png");
         body = image_body.getImage();
-        ImageIcon image_feed = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\food.png");
+        ImageIcon image_feed = new ImageIcon(path + "\\food.png");
         feed = image_feed.getImage();
     }
 
     void PaintGreen() {
-        ImageIcon image_up = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Green\\upGreen.png");
+        ImageIcon image_up = new ImageIcon(path + "\\Green\\upGreen.png");
         up = image_up.getImage();
-        ImageIcon image_down = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Green\\downGreen.png");
+        ImageIcon image_down = new ImageIcon(path + "\\Green\\downGreen.png");
         down = image_down.getImage();
-        ImageIcon image_left = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Green\\leftGreen.png");
+        ImageIcon image_left = new ImageIcon(path + "\\Green\\leftGreen.png");
         left = image_left.getImage();
-        ImageIcon image_right = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Green\\rightGreen.png");
+        ImageIcon image_right = new ImageIcon(path + "\\Green\\rightGreen.png");
         right = image_right.getImage();
-        ImageIcon image_body = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\Green\\bodyGreen.png");
+        ImageIcon image_body = new ImageIcon(path + "\\Green\\bodyGreen.png");
         body = image_body.getImage();
-        ImageIcon image_feed = new ImageIcon("C:\\Users\\Alex\\IdeaProjects\\JavaFirstMirea\\src\\ru\\mirea\\task17\\skins\\food.png");
+        ImageIcon image_feed = new ImageIcon(path + "\\food.png");
         feed = image_feed.getImage();
     }
 
