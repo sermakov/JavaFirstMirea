@@ -7,6 +7,10 @@
 
 Ознакомьтесь с обработкой строк, примените hashCode() в проекте.
 
+## Альтернативное задание
+
+1. Реализуйте сравнение 5 объектов по hashCode() в Java, отобразите хеши и результаты сравнения на экране
+
 ## Дополнительные материалы
 
 [Методы hashCode Java & equals: практика использования (javarush.ru)](https://javarush.ru/groups/posts/2179-metodih-equals--hashcode-praktika-ispoljhzovanija)
