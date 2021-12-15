@@ -1,0 +1,14 @@
+.fond{
+    -fx-background-color: #000000;
+}
+.title2 {
+    -fx-background-color: #ff0000;
+    -fx-font-weight: 900;
+    -fx-padding: 10px;
+    -fx-font-size: 18pt;
+}
+
+.bold {
+    -fx-font-weight: bold;
+}
+
