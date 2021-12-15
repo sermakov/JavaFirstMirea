@@ -17,10 +17,10 @@ public class Calculator {
 
     private String functionRegex = "cos\\($|sin\\($|tan\\($|ctg\\($|exp\\($|log\\($";
     private String operationRegex = "[-+\\/*^]$";
-    private String digitOrCloseBracket = "\\d$|[)]$";
     private String openBracketRegex = "[(]$";
-    private String closeBracketRegex = "[)]$";
     private String zeroRegex = "[0]$";
+    private String digitOrCloseBracketOrConstant = "\\d$|[)]$|[e]$|[p]";
+    private String closeBracketRegexOrConstant = "\\d$|[)]$|[p]$|[e]$";
 
 //    private String closeBracketRegex = "\\d$";
 
@@ -60,7 +60,7 @@ public class Calculator {
         if(expr.equals("0") || expr.equals("(0")) {
             replaceLast(value);
         } else {
-            Pattern pattern2 = Pattern.compile(closeBracketRegex);
+            Pattern pattern2 = Pattern.compile(closeBracketRegexOrConstant);
             Matcher matcher2 = pattern2.matcher(expr);
             if(matcher2.find()){
                 addSymbol("*" + value);
@@ -97,12 +97,34 @@ public class Calculator {
         }
     }
 
+    public void addConstant(String value){
+        String expr = this.expression.get();
+        if(expr.equals("0") || expr.equals("(0")) {
+            replaceLast(value);
+        } else {
+            Pattern pattern2 = Pattern.compile(zeroRegex);
+            Matcher matcher2 = pattern2.matcher(expr);
+            if (matcher2.find()){
+                replaceLast(value);
+            }
+            else {
+                Pattern pattern3 = Pattern.compile(digitOrCloseBracketOrConstant);
+                Matcher matcher3 = pattern3.matcher(expr);
+                if(matcher3.find()){
+                    addSymbol("*" + value);
+                }
+                else
+                    addSymbol(value);
+            }
+        }
+    }
+
     public void addOpenBracket(String value) {
         String expr = this.expression.get();
         if(expr.equals("0")) {
             this.expression.set("(0");
         } else {
-            Pattern pattern = Pattern.compile(digitOrCloseBracket);
+            Pattern pattern = Pattern.compile(digitOrCloseBracketOrConstant);
             Matcher matcher = pattern.matcher(expr);
             if(matcher.find()) {
                 addSymbol("*");
@@ -118,12 +140,13 @@ public class Calculator {
             ++openBracketCount;
             this.expression.set(value + "0");
         } else {
-            Pattern pattern = Pattern.compile(digitOrCloseBracket);
+            Pattern pattern = Pattern.compile(digitOrCloseBracketOrConstant);
             Matcher matcher = pattern.matcher(expr);
             if(matcher.find()) {
                 ++openBracketCount;
                 addSymbol("*");
             }
+            ++openBracketCount;
             addSymbol(value);
         }
     }
@@ -138,7 +161,7 @@ public class Calculator {
         if(matcher.find()) {
             return ;
         }
-        Pattern pattern2 = Pattern.compile(digitOrCloseBracket);
+        Pattern pattern2 = Pattern.compile(digitOrCloseBracketOrConstant);
         Matcher matcher2 = pattern2.matcher(expr);
         if(matcher2.find()) {
             addSymbol(value);

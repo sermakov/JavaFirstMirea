@@ -86,11 +86,19 @@ public class MainViewController {
     //node.getStyleClass().add("custom-content");
     //https://vaadin.com/docs/v14/flow/element-api/tutorial-dynamic-styling
     private void handleSetStyle(Event event){
+        //Node node = (Node) event.getSource();
+        //Scene scene = node.getScene();
+        //scene.getStylesheets().clear();
+        //scene.setUserAgentStylesheet(null);
+        //scene.getStylesheets().add("resources/css/darkMode.css");
+    }
+
+    @FXML
+    private void handleConstant(Event event){
         Node node = (Node) event.getSource();
-        Scene scene = node.getScene();
-        scene.getStylesheets().clear();
-        scene.setUserAgentStylesheet(null);
-        scene.getStylesheets().add("resources/css/darkMode.css");
+        String data = (String) node.getUserData();
+        calculator.addConstant(data);
+        event.consume();
     }
 
 }
