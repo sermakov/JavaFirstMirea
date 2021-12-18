@@ -1,4 +1,4 @@
-package ru.mirea.task23;
+package ru.mirea.task25;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.Objects;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Game
 {
@@ -39,7 +41,7 @@ public class Game
         int res = 0;
         for (Item i : list)
         {
-            if (Objects.equals(i.name, name))
+            if (Objects.equals(i.getName(), name))
                 return(res);
             res++;
         }
@@ -78,13 +80,23 @@ public class Game
             }
             case -254139010:
             {
-                System.out.println("MUNCHAUSEN MOMENT");
+                System.out.println("MÜNCHHAUSEN MOMENT");
                 System.out.print("\n\n");
                 h = false;
                 return;
             }
         }
-        String s = getWord(input, 0);
+        String s = input;
+        if (h)
+        {
+            Pattern regex = Pattern.compile(".* .*", Pattern.CASE_INSENSITIVE);
+            Matcher matcher = regex.matcher(input);
+            if (!matcher.find())
+                h = false;
+            resp = 0;
+        }
+        if (h)
+            s = getWord(s, 0);
         if (h)
         switch(s)
         {
@@ -99,13 +111,13 @@ public class Game
                 int i = findByName(w, inventory);
                 if (i >= 0)
                 {
-                    resp = inventory.get(i).response[findRes(input, inventory.get(i).action)];
+                    resp = inventory.get(i).getResponse()[findRes(input, inventory.get(i).getAction())];
                     break;
                 }
                 i = findByName(w, scene[sceneNum].inventory);
                 if (i >= 0)
                 {
-                    resp = scene[sceneNum].inventory.get(i).response[findRes(input, scene[sceneNum].inventory.get(i).action)];
+                    resp = scene[sceneNum].inventory.get(i).getResponse()[findRes(input, scene[sceneNum].inventory.get(i).getAction())];
                     break;
                 }
                 throw(new Exception(w));
@@ -116,13 +128,13 @@ public class Game
                 int i = findByName(w, inventory);
                 if (i >= 0)
                 {
-                    resp = inventory.get(i).response[findRes(input, inventory.get(i).action)];
+                    resp = inventory.get(i).getResponse()[findRes(input, inventory.get(i).getAction())];
                     break;
                 }
                 i = findByName(w, scene[sceneNum].inventory);
                 if (i >= 0)
                 {
-                    resp = scene[sceneNum].inventory.get(i).response[findRes(input, scene[sceneNum].inventory.get(i).action)];
+                    resp = scene[sceneNum].inventory.get(i).getResponse()[findRes(input, scene[sceneNum].inventory.get(i).getAction())];
                     break;
                 }
                 throw(new Exception(w));
@@ -133,13 +145,13 @@ public class Game
                 int i = findByName(w, inventory);
                 if (i >= 0)
                 {
-                    resp = inventory.get(i).response[findRes(input, inventory.get(i).action)];
+                    resp = inventory.get(i).getResponse()[findRes(input, inventory.get(i).getAction())];
                     break;
                 }
                 i = findByName(w, scene[sceneNum].inventory);
                 if (i >= 0)
                 {
-                    resp = scene[sceneNum].inventory.get(i).response[findRes(input, scene[sceneNum].inventory.get(i).action)];
+                    resp = scene[sceneNum].inventory.get(i).getResponse()[findRes(input, scene[sceneNum].inventory.get(i).getAction())];
                     break;
                 }
                 throw(new Exception(w));

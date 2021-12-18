@@ -82,7 +82,8 @@ public class Game
             {
                 System.out.println("MÜNCHHAUSEN MOMENT");
                 System.out.print("\n\n");
-                break;
+                h = false;
+                return;
             }
         }
         String s = input;
