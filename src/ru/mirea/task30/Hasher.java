@@ -1,4 +1,4 @@
-package ru.mirea.task29;
+package ru.mirea.task30;
 
 public class Hasher
 {
