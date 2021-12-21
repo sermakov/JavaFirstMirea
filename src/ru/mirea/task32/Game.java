@@ -18,6 +18,7 @@ public class Game
     MusicPlayer Primary;
     MusicPlayer Secondary;
     public JTextArea textArea;
+    public JTextArea inventoryArea;
 
     public Game(int attempt) throws Exception
     {
@@ -31,8 +32,32 @@ public class Game
         outFrame.getContentPane().add(textArea);
         outFrame.pack();
         outFrame.setVisible(true);
+
+        JFrame inventoryFrame = new JFrame("ИНВЕНТАРЬ");
+        inventoryFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        inventoryArea = new JTextArea(8,10);
+        Font font1 = new Font("Times new roman", Font.BOLD, 50);
+        inventoryArea.setFont(font1);
+        inventoryArea.setEditable(false);
+        inventoryArea.setText("пусто");
+        inventoryFrame.getContentPane().add(inventoryArea);
+        inventoryFrame.pack();
+        inventoryFrame.setLocation(820, 0);
+        inventoryFrame.setSize(400,550);
+        inventoryFrame.setVisible(true);
+
         Primary = new MusicPlayer();
         Primary.play("./AMOGUS II/room1.wav", true, 0);
+    }
+
+    public void inventoryToWindow()
+    {
+        if (inventory.size() == 0)
+            inventoryArea.setText("пусто");
+        else
+            inventoryArea.setText("");
+        for (Item i : inventory)
+            inventoryArea.append(i.getName() + "\n");
     }
 
     public String getWord(String input, int i)
@@ -122,6 +147,11 @@ public class Game
             case "идти":
             {
                 resp = scene[sceneNum].getResponse(input);
+                if (resp == -1)
+                {
+                    textArea.setText("Вам не удалось пойти " + getWord(input,5) + ".");
+                    return;
+                }
                 break;
             }
             case "использовать":
@@ -192,6 +222,7 @@ public class Game
                         textArea.setText("Вы взяли " + w + ".");
                         inventory.add(scene[sceneNum].inventory.get(i));
                         scene[sceneNum].inventory.remove(i);
+                        inventoryToWindow();
                     }
                     else
                     {
@@ -227,7 +258,11 @@ public class Game
                 }
                 else
                 {
+                    Primary.stop();
+                    Secondary.play("./AMOGUS II/boom.wav", false, 2500);
+                    Secondary.play("./AMOGUS II/gameover.wav", false, 0);
                     textArea.setText("СЛИШКОМ ПОЗДНО!\nА вообще, взрыв - как укол.\nБыстро было. Больно не было.");
+                    condition = -1;
                     this.gameOver();
                 }
                 break;
@@ -336,7 +371,10 @@ public class Game
             {
                 textArea.setText("Вы открыли дверь ключом.");
                 if (findByName("ключ", inventory) > -1)
+                {
                     inventory.remove(findByName("ключ", inventory));
+                    inventoryToWindow();
+                }
                 else
                     scene[sceneNum].inventory.remove(findByName("ключ", scene[sceneNum].inventory));
                 scene[sceneNum].inventory.remove(findByName("дверь", scene[sceneNum].inventory));
@@ -350,7 +388,13 @@ public class Game
             case 50000003:
             {
                 textArea.setText("Вы съели камень. Зачем?");
-                inventory.remove(findByName("камень", inventory));
+                if (findByName("камень", inventory) > -1)
+                {
+                    inventory.remove(findByName("камень", inventory));
+                    inventoryToWindow();
+                }
+                else
+                    scene[sceneNum].inventory.remove(findByName("камень", scene[sceneNum].inventory));
                 break;
             }
             case 50004003:
@@ -359,7 +403,10 @@ public class Game
                 throw(new Exception("дробитель"));
                 textArea.setText("Не пробил!\nА вот камень раскололся.");
                 if (findByName("камень", inventory) > -1)
+                {
                     inventory.remove(findByName("камень", inventory));
+                    inventoryToWindow();
+                }
                 else
                     scene[sceneNum].inventory.remove(findByName("камень", scene[sceneNum].inventory));
                 break;
@@ -452,7 +499,10 @@ public class Game
                 textArea.setText("Вам удалось самоутвердиться перед\nкамнем. От удара он рассыпался.");
                 textArea.append("\nГалька это запомнит.");
                 if (findByName("камень", inventory) >= 0)
+                {
                     inventory.remove(findByName("камень", inventory));
+                    inventoryToWindow();
+                }
                 else
                     scene[sceneNum].inventory.remove(findByName("камень", scene[sceneNum].inventory));
                 break;
@@ -484,14 +534,19 @@ public class Game
             case 64000004:
             {
                 textArea.setText("Мощность действительно\nбыла невероятной.");
+                Primary.stop();
+                Secondary.play("./AMOGUS II/gameover.wav", false, 0);
                 condition = -1;
                 gameOver();
                 break;
             }
             case 90000000:
             {
+                Primary.stop();
+                Secondary.play("./AMOGUS II/boom.wav", false, 2500);
                 if (new Date().getTime() < timerStart + 10000)
                 {
+                    Secondary.play("./AMOGUS II/switch.wav", false, 700);
                     textArea.setText("Вам удаётся выбраться из\nкомнаты прежде, чем\nпрогремел взрыв!..");
                     condition = 91000000;
                     break;
@@ -501,6 +556,7 @@ public class Game
                     textArea.setText("СЛИШКОМ ПОЗДНО!");
                     textArea.append("\nА вообще, взрыв - как укол.\nБыстро было. Больно не было.");
                     condition = -1;
+                    Secondary.play("./AMOGUS II/gameover.wav", false, 0);
                     gameOver();
                     break;
                 }
@@ -514,6 +570,7 @@ public class Game
             case 92000000:
             {
                 textArea.setText("Победа!");
+                Secondary.play("./AMOGUS II/win.wav", false, 0);
                 condition = -1;
                 break;
             }
@@ -524,14 +581,14 @@ public class Game
     {
         DateFormat DF = new SimpleDateFormat("dd-MM-yyyy");
         String date = DF.format(new Date());
-        System.out.println(" ______________");
-        System.out.println("/              " + (char)92);
-        System.out.println("|  HERE  LIES  |");
-        System.out.println("|    AMOGUS    |");
-        System.out.println("|  XX-XX-XXXX  |");
-        System.out.println("|      --      |");
-        System.out.println("|  " + date + "  |");
-        System.out.println("|______________|");
+        inventoryArea.setText(" ______________");
+        inventoryArea.append("\n/                           " + (char)92);
+        inventoryArea.append("\n|   HERE  LIES   |");
+        inventoryArea.append("\n|     AMOGUS     |");
+        inventoryArea.append("\n|  XX-XX-XXXX |");
+        inventoryArea.append("\n|             --            |");
+        inventoryArea.append("\n|     " + date + "    |");
+        inventoryArea.append("\n|______________|");
     }
 
     public int sceneNum = 0;

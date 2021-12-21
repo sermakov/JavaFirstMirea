@@ -18,7 +18,10 @@ public class Scene
 
     public Integer getResponse(String action)
     {
-        return(actResp.get(action));
+        if (actResp.containsKey(action))
+            return(actResp.get(action));
+        else
+            return(-1);
     }
 
     public BufferedImage image;

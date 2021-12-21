@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-//НОВОВВЕДЕНИЯ: результаты успешного и проваленного тестирований сохранены в файлах .md в формате XML
+//НОВОВВЕДЕНИЯ: проект завершён
 enum type
 {
     T,
@@ -114,7 +114,7 @@ public class Main
         scene[1] = new Scene("./AMOGUS II/sample.png", actResp1, inventory[1]);
 
         HashMap<String, Integer> actResp2 = new HashMap<>();
-        actResp2.put("D", 1);
+        actResp2.put("осмотреться", 1);
         actResp2.put("идти назад", 90000000);
         scene[2] = new Scene("./AMOGUS II/sample.png", actResp2, inventory[2]);
 
