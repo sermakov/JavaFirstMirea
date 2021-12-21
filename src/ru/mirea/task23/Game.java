@@ -50,6 +50,7 @@ public class Game
     {
         int resp = 0;
         boolean h = true;
+        //НОВОВВЕДЕНИЯ: теперь для распознания действий, применимых на всех сценах, используется hashCode()
         switch(input.hashCode())
         {
             case 501497002:

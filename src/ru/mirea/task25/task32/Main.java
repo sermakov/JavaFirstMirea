@@ -1,10 +1,14 @@
-package ru.mirea.task27;
+package ru.mirea.task25.task32;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Scanner;
-//НОВОВВЕДЕНИЯ: переделан механизм создания пар действие-ответ: теперь эти пары хранятся
-//не в двух массивах с одинаковыми индексами, а в карте
+
+//НОВОВВЕДЕНИЯ: результаты успешного и проваленного тестирований сохранены в файлах .md в формате XML
 enum type
 {
     T,
@@ -13,6 +17,8 @@ enum type
 
 public class Main
 {
+    public static LinkedList<String> actual = new LinkedList<>();
+
     public static Item ItemFactory(type tp, String name, HashMap<String, Integer> iactResp)
     {
         Item product = null;
@@ -35,22 +41,35 @@ public class Main
     public static void main(String[] args) throws Exception
     {
         int scenes = 3;
-        int items = 5;
+
+        AttemptCounter attempt = null;
+        try
+        {
+            FileInputStream fileInputStream = new FileInputStream("./AMOGUS II/attempt.txt");
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            attempt = (AttemptCounter) objectInputStream.readObject();
+        }
+        catch (Exception e)
+        {
+            attempt = new AttemptCounter();
+        }
+        attempt.number++;
+        System.out.println("Попытка " + attempt.number + "\n\n");
+        FileOutputStream outputStream = new FileOutputStream("./AMOGUS II/attempt.txt");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
+        objectOutputStream.writeObject(attempt);
+        objectOutputStream.close();
 
         Game G = new Game();
         Scene[] scene = new Scene[scenes];
-        String[] name = new String[items];
         LinkedList<Item>[] inventory = new LinkedList[scenes];
         for (int i = 0; i < scenes; i++)
             inventory[i] = new LinkedList<>();
 
-        //НОВОВВЕДЕНИЯ: переделан механизм создания пар действие-ответ: теперь эти пары хранятся
-        //не в двух массивах с одинаковыми индексами, а в карте
         HashMap<String, Integer> actResp0 = new HashMap<>();
         actResp0.put("D", 0);
         actResp0.put("осмотреться", 10000000);
         actResp0.put("идти вперёд", 20000001);
-
 
         HashMap<String, Integer> iactResp1 = new HashMap<>();
         iactResp1.put("D", 0);

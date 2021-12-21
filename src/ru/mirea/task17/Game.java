@@ -2,7 +2,7 @@ package ru.mirea.task17;
 
 import java.util.LinkedList;
 import java.util.Objects;
-
+//НОВОВВЕДЕНИЕ: предметы из инвентаря теперь не String, а enum Item;
 enum Item
 {
     Камень,

@@ -5,6 +5,7 @@ public class ItemDecorator implements Item
     Item item;
     public boolean takeability;
 
+    //НОВОВВЕДЕНИЯ: переделан механизм создания предметов - теперь создаваемые объекты "декорируются подбираемостью"
     public ItemDecorator(Item item, type T)
     {
         this.item = item;

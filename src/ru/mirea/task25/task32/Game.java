@@ -1,4 +1,4 @@
-package ru.mirea.task24;
+package ru.mirea.task25.task32;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -27,21 +27,12 @@ public class Game
         return(s);
     }
 
-    public static int findRes(String input, String[] array)
-    {
-        int l = array.length;
-        for (int i = 0; i < l; i++)
-            if (Objects.equals(array[i], input))
-                return(i);
-        return(0);
-    }
-
     public static int findByName(String name, LinkedList<Item> list)
     {
         int res = 0;
         for (Item i : list)
         {
-            if (Objects.equals(i.name, name))
+            if (Objects.equals(i.getName(), name))
                 return(res);
             res++;
         }
@@ -74,7 +65,7 @@ public class Game
             }
             case 130341898:
             {
-                resp = scene[sceneNum].response[1];
+                resp = scene[sceneNum].getResponse("осмотреться");
                 h = false;
                 break;
             }
@@ -82,14 +73,12 @@ public class Game
             {
                 System.out.println("MÜNCHHAUSEN MOMENT");
                 System.out.print("\n\n");
-                h = false;
+                Main.actual.add("MÜNCHHAUSEN MOMENT");
+                Main.actual.add("\n\n");
                 return;
             }
         }
         String s = input;
-        //НОВОВВЕДЕНИЯ: в игре не используются действия из одного слова (кроме "осмотреться", которое обрабатывает hashCode())
-        //Выражение ".* .*" позволяет проверить, если в строке хотя бы один пробел.
-        //Если да, то, в теории, введена многословная команда, и её есть смысл проверять дальше, иначе команда бессмысленна.
         if (h)
         {
             Pattern regex = Pattern.compile(".* .*", Pattern.CASE_INSENSITIVE);
@@ -105,7 +94,7 @@ public class Game
         {
             case "идти":
             {
-                resp = scene[sceneNum].response[findRes(input, scene[sceneNum].action)];
+                resp = scene[sceneNum].getResponse(input);
                 break;
             }
             case "использовать":
@@ -114,13 +103,13 @@ public class Game
                 int i = findByName(w, inventory);
                 if (i >= 0)
                 {
-                    resp = inventory.get(i).response[findRes(input, inventory.get(i).action)];
+                    resp = inventory.get(i).getResponse(input);
                     break;
                 }
                 i = findByName(w, scene[sceneNum].inventory);
                 if (i >= 0)
                 {
-                    resp = scene[sceneNum].inventory.get(i).response[findRes(input, scene[sceneNum].inventory.get(i).action)];
+                    resp = scene[sceneNum].inventory.get(i).getResponse(input);
                     break;
                 }
                 throw(new Exception(w));
@@ -131,13 +120,13 @@ public class Game
                 int i = findByName(w, inventory);
                 if (i >= 0)
                 {
-                    resp = inventory.get(i).response[findRes(input, inventory.get(i).action)];
+                    resp = inventory.get(i).getResponse(input);
                     break;
                 }
                 i = findByName(w, scene[sceneNum].inventory);
                 if (i >= 0)
                 {
-                    resp = scene[sceneNum].inventory.get(i).response[findRes(input, scene[sceneNum].inventory.get(i).action)];
+                    resp = scene[sceneNum].inventory.get(i).getResponse(input);
                     break;
                 }
                 throw(new Exception(w));
@@ -148,13 +137,13 @@ public class Game
                 int i = findByName(w, inventory);
                 if (i >= 0)
                 {
-                    resp = inventory.get(i).response[findRes(input, inventory.get(i).action)];
+                    resp = inventory.get(i).getResponse(input);
                     break;
                 }
                 i = findByName(w, scene[sceneNum].inventory);
                 if (i >= 0)
                 {
-                    resp = scene[sceneNum].inventory.get(i).response[findRes(input, scene[sceneNum].inventory.get(i).action)];
+                    resp = scene[sceneNum].inventory.get(i).getResponse(input);
                     break;
                 }
                 throw(new Exception(w));
@@ -184,7 +173,7 @@ public class Game
             }
             default:
             {
-                resp = scene[sceneNum].response[0];
+                resp = scene[sceneNum].getResponse("D");
                 break;
             }
         }
@@ -260,6 +249,8 @@ public class Game
             {
                 System.out.println("Красавец!");
                 System.out.print("\n\n");
+                Main.actual.add("Красавец!");
+                Main.actual.add("\n\n");
                 break;
             }
             case 40000001:
@@ -292,6 +283,8 @@ public class Game
             {
                 System.out.println("Эй, руки прочь от себя! Игрушка детская!");
                 System.out.print("\n\n");
+                Main.actual.add("Эй, руки прочь от себя! Игрушка детская!");
+                Main.actual.add("\n\n");
                 break;
             }
             case 50000001:
@@ -304,6 +297,7 @@ public class Game
             {
                 System.out.println("Вы открыли дверь ключом.");
                 System.out.print("\n\n");
+                inventory.remove(findByName("ключ", inventory));
                 scene[sceneNum].inventory.remove(findByName("дверь", scene[sceneNum].inventory));
                 break;
             }
@@ -393,6 +387,8 @@ public class Game
             {
                 System.out.println("Садомазохизм не одобряем.");
                 System.out.print("\n\n");
+                Main.actual.add("Садомазохизм не одобряем.");
+                Main.actual.add("\n\n");
                 break;
             }
             case 60000001:

@@ -14,7 +14,7 @@ public abstract class Dog
     {
         String S1 = "" + this.getClass();
         String S2 = "";
-        for (int i = 18; i < S1.length(); i++)
+        for (int i = 21; i < S1.length(); i++)
             S2 = S2 + S1.charAt(i);
         return(S2);
     }

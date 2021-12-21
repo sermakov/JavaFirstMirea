@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class DrawShapes extends JPanel
 {
-    public DrawShapes(){};
+    public DrawShapes() {};
 
     public void paintComponent(Graphics g)
     {

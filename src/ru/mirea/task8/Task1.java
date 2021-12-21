@@ -12,6 +12,7 @@ public class Task1
         Oval o = new Oval(Color.GREEN, 20, 20);
         Rectangle r = new Rectangle(Color.BLUE, 40, 40);
         JPanel render = new DrawShapes();
+        render.paintComponents(frame.getGraphics());
         frame.setSize(420, 443);
         frame.add(render);
         frame.setVisible(true);

@@ -40,6 +40,7 @@ public class Main
         int scenes = 3;
         int items = 5;
 
+        //НОВОВВЕДЕНИЯ: номер попытки прохождения сериализован
         AttemptCounter attempt = null;
         try
         {

@@ -1,10 +1,18 @@
-package ru.mirea.task27;
+package ru.mirea.task32;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.io.*;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Scanner;
-//НОВОВВЕДЕНИЯ: переделан механизм создания пар действие-ответ: теперь эти пары хранятся
-//не в двух массивах с одинаковыми индексами, а в карте
+
+//НОВОВВЕДЕНИЯ: результаты успешного и проваленного тестирований сохранены в файлах .md в формате XML
 enum type
 {
     T,
@@ -13,6 +21,8 @@ enum type
 
 public class Main
 {
+    public static LinkedList<String> actual = new LinkedList<>();
+
     public static Item ItemFactory(type tp, String name, HashMap<String, Integer> iactResp)
     {
         Item product = null;
@@ -35,22 +45,34 @@ public class Main
     public static void main(String[] args) throws Exception
     {
         int scenes = 3;
-        int items = 5;
 
-        Game G = new Game();
+        AttemptCounter attempt = null;
+        try
+        {
+            FileInputStream fileInputStream = new FileInputStream("./AMOGUS II/attempt.txt");
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            attempt = (AttemptCounter) objectInputStream.readObject();
+        }
+        catch (Exception e)
+        {
+            attempt = new AttemptCounter();
+        }
+        attempt.number++;
+        FileOutputStream outputStream = new FileOutputStream("./AMOGUS II/attempt.txt");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
+        objectOutputStream.writeObject(attempt);
+        objectOutputStream.close();
+
+        Game G = new Game(attempt.number);
         Scene[] scene = new Scene[scenes];
-        String[] name = new String[items];
         LinkedList<Item>[] inventory = new LinkedList[scenes];
         for (int i = 0; i < scenes; i++)
             inventory[i] = new LinkedList<>();
 
-        //НОВОВВЕДЕНИЯ: переделан механизм создания пар действие-ответ: теперь эти пары хранятся
-        //не в двух массивах с одинаковыми индексами, а в карте
         HashMap<String, Integer> actResp0 = new HashMap<>();
         actResp0.put("D", 0);
         actResp0.put("осмотреться", 10000000);
         actResp0.put("идти вперёд", 20000001);
-
 
         HashMap<String, Integer> iactResp1 = new HashMap<>();
         iactResp1.put("D", 0);
@@ -88,7 +110,7 @@ public class Main
         iactResp4.put("использовать дробитель", 50000004);
         iactResp4.put("ударить дробитель", 60000004);
 
-        inventory[1].add(ItemFactory(type.NT, "дробитель", iactResp3));
+        inventory[1].add(ItemFactory(type.NT, "дробитель", iactResp4));
         scene[1] = new Scene("./AMOGUS II/sample.png", actResp1, inventory[1]);
 
         HashMap<String, Integer> actResp2 = new HashMap<>();
@@ -99,17 +121,38 @@ public class Main
         G.scene = scene;
         Scanner in = new Scanner(System.in);
         String input;
-        while (true)
+
+        JFrame inFrame = new JFrame("ДУ ИТ");
+        inFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JTextField textField = new JTextField(20);
+        Font font = new Font("Times new roman", Font.BOLD, 50);
+        textField.setFont(font);
+        textField.addKeyListener(new KeyAdapter()
         {
-            input = in.nextLine();
-            try
+            public void keyPressed(KeyEvent e)
             {
-                G.act(input);
+                if (e.getKeyCode() == KeyEvent.VK_ENTER)
+                {
+                    try
+                    {
+                        String got = textField.getText();
+                        textField.setText("");
+                        G.act(got);
+                    }
+                    catch (Exception ex)
+                    {
+                        G.textArea.setText("Вам не удалось найти\n" + ex.getMessage() + ".");
+                    }
+                    textField.setText("");
+                }
             }
-            catch (Exception e)
-            {
-                System.out.println("Вам не удалось найти " + e.getMessage() + ".\n\n");
-            }
-        }
+        });
+        inFrame.getContentPane().add(textField);
+        inFrame.pack();
+        inFrame.setLocation(0, 205);
+        inFrame.setSize(836,100);
+        inFrame.setVisible(true);
+
+        while (true) {}
     }
 }

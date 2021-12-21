@@ -222,5 +222,6 @@ public class Game
 
     public int sceneNum = 0;
     public Scene scene[];
+    //ДЖЕНЕРИКИ уже используются в проекте в рамках типа для списка предметов (инвентаря)
     public LinkedList<Item> inventory = new LinkedList<>(); //<--ДЖЕНЕРИК
 }

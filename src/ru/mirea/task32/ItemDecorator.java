@@ -1,9 +1,7 @@
-package ru.mirea.task26;
+package ru.mirea.task32;
 
 public class ItemDecorator implements Item
 {
-    //НОВОВВЕДЕНИЯ: переделан механизм создания предметов -
-    //теперь создаваемые объекты "декорируются СТРАТЕГИЕЙ подбираемости"
     Item item;
     TakeStrategy takeStrategy;
 
@@ -21,14 +19,14 @@ public class ItemDecorator implements Item
         return(item.getName());
     }
 
-    public String[] getAction()
+    public Integer getResponse(String action)
     {
-        return(item.getAction());
+        return(item.getResponse(action));
     }
 
-    public int[] getResponse()
+    public boolean containsKey(String key)
     {
-        return(item.getResponse());
+        return(item.containsKey(key));
     }
 
     public boolean take()
