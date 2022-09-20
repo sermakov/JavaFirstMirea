@@ -37,7 +37,7 @@ class GameTest
     }
 
     @Test
-    void getWordTest3()
+    void getWordTestInvalid()
     {
         String input = "использовать ключ на дверь";
         int i = 40;
