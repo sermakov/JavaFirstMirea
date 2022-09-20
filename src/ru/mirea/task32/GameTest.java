@@ -2,26 +2,49 @@ package ru.mirea.task32;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+import ru.mirea.task32.Game;
 
-class GameTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class GameTest
+{
+    public Game game = new Game(0);
+
+    GameTest() throws Exception {}
 
     @Test
-    void getWord()
+    void getWordTest1()
     {
-        int i = 13;
         String input = "использовать ключ на дверь";
-        String s = "";
-        int l = input.length();
-        if (l < i)
-            return;
-        while (i != l)
-        {
-            if (input.charAt(i) == ' ')
-                break;
-            s = s + input.charAt(i);
-            i++;
-        }
+        int i = 13;
+
+        String expected = "ключ";
+
+        String actual = game.getWord(input, i);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void getWordTest2()
+    {
+        String input = "использовать ключ на дверь";
+        int i = 0;
+
         String expected = "использовать";
-        Assert.assertEquals(expected, s);
+
+        String actual = game.getWord(input, i);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void getWordTest3()
+    {
+        String input = "использовать ключ на дверь";
+        int i = 40;
+
+        String expected = "";
+
+        String actual = game.getWord(input, i);
+        assertEquals(expected, actual);
     }
 }

@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 //НОВОВВЕДЕНИЯ: тестирование метода getWord(String input, int i) класса Game
-class GameTest {
-
+class GameTest
+{
     public Game game = new Game();
 
     @Test
