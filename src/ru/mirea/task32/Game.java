@@ -388,6 +388,7 @@ public class Game
             case 50000003:
             {
                 textArea.setText("Вы съели камень. Зачем?");
+                /*
                 if (findByName("камень", inventory) > -1)
                 {
                     inventory.remove(findByName("камень", inventory));
@@ -395,6 +396,7 @@ public class Game
                 }
                 else
                     scene[sceneNum].inventory.remove(findByName("камень", scene[sceneNum].inventory));
+                 */
                 break;
             }
             case 50004003:
@@ -402,6 +404,7 @@ public class Game
                 if (sceneNum != 1)
                 throw(new Exception("дробитель"));
                 textArea.setText("Не пробил!\nА вот камень раскололся.");
+                /*
                 if (findByName("камень", inventory) > -1)
                 {
                     inventory.remove(findByName("камень", inventory));
@@ -409,6 +412,7 @@ public class Game
                 }
                 else
                     scene[sceneNum].inventory.remove(findByName("камень", scene[sceneNum].inventory));
+                 */
                 break;
             }
             case 50000004:
@@ -423,19 +427,20 @@ public class Game
             {
                 while (true)
                 {
-                    try
-                    {
+                    //try
+                    //{
                         a = Integer.parseInt(input);
                         condition = 52000004;
                         textArea.setText("Теперь он просит знаменатель.\nХмм...");
                         break;
-                    }
+                    /*}
                     catch (NumberFormatException e)
                     {
                         textArea.setText("Не бывает таких дробей!\nСоберись и введи заново!");
                         condition = 0;
                         return;
                     }
+                     */
                 }
                 break;
             }
@@ -444,17 +449,18 @@ public class Game
                 int b = 0;
                 while (true)
                 {
-                    try
-                    {
+                    //try
+                    //{
                         b = Integer.parseInt(input);
                         break;
-                    }
+                    /*}
                     catch (NumberFormatException e)
                     {
                         textArea.setText("Не бывает таких дробей!\nСоберись и введи заново!");
                         condition = 0;
                         return;
                     }
+                     */
                 }
                 try
                 {
@@ -498,6 +504,7 @@ public class Game
             {
                 textArea.setText("Вам удалось самоутвердиться перед\nкамнем. От удара он рассыпался.");
                 textArea.append("\nГалька это запомнит.");
+                /*
                 if (findByName("камень", inventory) >= 0)
                 {
                     inventory.remove(findByName("камень", inventory));
@@ -505,6 +512,7 @@ public class Game
                 }
                 else
                     scene[sceneNum].inventory.remove(findByName("камень", scene[sceneNum].inventory));
+                 */
                 break;
             }
             case 60000004:
