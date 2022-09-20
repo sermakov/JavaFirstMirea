@@ -1,29 +1,36 @@
 package ru.mirea.task30;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 //НОВОВВЕДЕНИЯ: тестирование метода getWord(String input, int i) класса Game
 class GameTest {
 
+    public Game game = new Game();
+
     @Test
-    void getWord()
+    void getWordTest1()
     {
-        int i = 13;
         String input = "использовать ключ на дверь";
-        String s = "";
-        int l = input.length();
-        if (l < i)
-            return;
-        while (i != l)
-        {
-            if (input.charAt(i) == ' ')
-                break;
-            s = s + input.charAt(i);
-            i++;
-        }
+        int i = 13;
+
         String expected = "ключ";
-        Assert.assertEquals(expected, s);
+
+        String actual = game.getWord(input, i);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void getWordTest2()
+    {
+        String input = "использовать ключ на дверь";
+        int i = 0;
+
+        String expected = "использовать";
+
+        String actual = game.getWord(input, i);
+        assertEquals(expected, actual);
     }
 }
