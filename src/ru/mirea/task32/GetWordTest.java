@@ -6,11 +6,11 @@ import ru.mirea.task32.Game;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class GameTest
+class GetWordTest
 {
     public Game game = new Game(0);
 
-    GameTest() throws Exception {}
+    GetWordTest() throws Exception {}
 
     @Test
     void getWordTest1()

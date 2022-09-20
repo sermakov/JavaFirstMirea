@@ -21,7 +21,6 @@ enum type
 
 public class Main
 {
-    public static LinkedList<String> actual = new LinkedList<>();
 
     public static Item ItemFactory(type tp, String name, HashMap<String, Integer> iactResp)
     {

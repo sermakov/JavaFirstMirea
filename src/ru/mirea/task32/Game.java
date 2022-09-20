@@ -88,6 +88,68 @@ public class Game
         return(-1);
     }
 
+    public int actHashUnit(String input)
+    {
+        int resp = 0;
+        boolean h = true;
+        if (condition != 0)
+        {
+            resp = condition;
+            h = false;
+        }
+        if (h)
+            switch(input.hashCode())
+            {
+                case 501497002:
+                {
+                    resp = 50000000;
+                    h = false;
+                    break;
+                }
+                case -610461674:
+                {
+                    resp = 40000000;
+                    h = false;
+                    break;
+                }
+                case -2067318447:
+                {
+                    resp = 60000000;
+                    h = false;
+                    break;
+                }
+                case 130341898:
+                {
+                    resp = scene[sceneNum].getResponse("осмотреться");
+                    h = false;
+                    break;
+                }
+                case -254139010:
+                {
+                    resp = 70000000;
+                    h = false;
+                    textArea.setText("MÜNCHHAUSEN MOMENT");
+                    break;
+                }
+            }
+        return(resp);
+    }
+
+    public boolean actRegexUnit(String input)
+    {
+        int resp = 0;
+        boolean h = true;
+        if (h)
+        {
+            Pattern regex = Pattern.compile(".* .*", Pattern.CASE_INSENSITIVE);
+            Matcher matcher = regex.matcher(input);
+            if (!matcher.find())
+                h = false;
+            resp = 0;
+        }
+        return(h);
+    }
+
     public void act(String input) throws Exception
     {
         int resp = 0;
