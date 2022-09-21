@@ -1,13 +1,13 @@
 package ru.mirea.task2;
 
-public class Circle {
+public class CircleOld {
 
     private double x;
     private double y;
     private double r;
     private String colour;
 
-    public Circle(double x, double y, double r, String colour)
+    public CircleOld(double x, double y, double r, String colour)
     {
         this.x = x;
         this.y = y;

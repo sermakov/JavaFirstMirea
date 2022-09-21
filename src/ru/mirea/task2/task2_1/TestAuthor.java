@@ -1,6 +1,8 @@
-package ru.mirea.task2;
+package ru.mirea.task2.task2_1;
 
 //№1
+
+import ru.mirea.task2.task2_1.Author;
 
 import java.lang.*;
 import java.util.Scanner;
