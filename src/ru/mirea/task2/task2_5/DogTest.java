@@ -12,5 +12,6 @@ public class DogTest {
         System.out.println(dog1.getName() + "'s age in human years is " + dog1.ageInHumanYears());
         System.out.println(dogTester.toString());
     }
+
 }
 
