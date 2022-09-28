@@ -12,7 +12,7 @@ public class TestAuthor {
         String newMail;
         Scanner scan = new Scanner(System.in);
         Author obj1 = new Author("Maxim", "kallkae@mail.ru", 'M');
-        System.out.println("Author's name: " + obj1.getName());
+        System.out.println("Author's nfame: " + obj1.getName());
         System.out.println("Author's email: " + obj1.getEmail());
         System.out.println("Installing a new author's email: ");
         newMail = scan.nextLine();

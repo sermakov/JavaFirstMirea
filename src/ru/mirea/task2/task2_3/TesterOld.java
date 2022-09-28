@@ -1,4 +1,6 @@
-package ru.mirea.task2;
+package ru.mirea.task2.task2_3;
+
+import ru.mirea.task2.task2_3.CircleOld;
 
 import java.lang.*;
 import java.util.Scanner;
